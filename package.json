@@ -1,0 +1,19 @@
+{
+  "name": "project-react-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kriit24/project-react-mvc.git"
+  },
+  "author": "Kuno Vaik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kriit24/project-react-mvc/issues"
+  },
+  "homepage": "https://github.com/kriit24/project-react-mvc#readme"
+}

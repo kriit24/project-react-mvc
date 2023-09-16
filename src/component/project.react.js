@@ -1,0 +1,140 @@
+import React from 'react';
+import { Alert, StatusBar } from 'react-native';
+
+global.ProjectReact_App = {};
+
+class ProjectReact extends React.Component {
+  state = {
+    content: null,
+  };
+
+  _isMounted = false;
+  _willUnmount = false;
+  _willUnmountList = [];
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this._isMounted = true;
+    this._willUnmount = false;
+    if (this.props.method !== undefined) {
+      let method = this.props.method;
+      let props = this.props;
+      let args = [];
+      if (Object.values(props).length) {
+        Object.keys(props).forEach((key) => {
+          if (['method'].indexOf(key) === -1) {
+            args.push(props[key]);
+          }
+        });
+      }
+
+      if (this[method] === undefined) {
+        Alert.alert(
+          'Method "' + method + '" not found @ "' + this.constructor.name + '"'
+        );
+      } else {
+        this[method].apply(this, args);
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+    this._willUnmount = true;
+    if (this._willUnmountList.length) {
+      const _willUnmountList = this._willUnmountList;
+      this._willUnmountList = [];
+      _willUnmountList.forEach((callback) => {
+        callback();
+      });
+    }
+  }
+
+  export(object) {
+    let exportObject = true;
+    let keys = Object.keys(object);
+    keys.forEach((value, key) => {
+      if (global.ProjectReact_App[value] !== undefined) {
+        //Alert.alert('Export key "' + value + '" all ready exists');
+        exportObject = false;
+      }
+    });
+
+    if (exportObject)
+      global.ProjectReact_App = Object.assign(global.ProjectReact_App, object);
+  }
+
+  component(content) {
+    let stateObject = { content: content };
+    if (this._willUnmount === false) {
+      if (this._isMounted) {
+        this.setState(stateObject);
+      } else {
+        this.state = Object.assign(this.state, stateObject);
+      }
+    }
+  }
+
+  call(content, reject) {
+    if (typeof content === 'function') {
+      if (this._isMounted && this._willUnmount === false) content();
+      else {
+        if (reject !== undefined) {
+          reject();
+        }
+      }
+    } else {
+      let params = Object.assign({}, content.props);
+      let fn = content.type;
+      fn.apply(null, new Array(params));
+    }
+  }
+
+  //NB! view function must be
+  /*
+    function Index(){
+    }
+
+    IF u use, then it will not work
+    () => {}
+     */
+  view(component) {
+    let Source = Object.assign({}, component);
+    if (typeof Source.type === 'function') {
+      Source.type = Source.type.bind(this);
+    }
+    this.component(Source);
+  }
+
+  action(component) {
+    //console.log(this.constructor.name);
+
+    let className = component.type;
+    let action = new className();
+    action.props =
+      action.props === undefined
+        ? this.props
+        : { ...this.props, ...action.props };
+    let method =
+      component.props.method !== undefined ? component.props.method : 'Index';
+    let content = action[method].apply(action, new Array(component.props));
+    if (content !== undefined) {
+      this.component(content);
+    }
+  }
+
+  render() {
+    return this.state.content;
+  }
+}
+
+function App(app_object) {
+  if (app_object !== undefined) global.ProjectReact_App = app_object;
+
+  return global.ProjectReact_App;
+}
+
+export { ProjectReact, App };
