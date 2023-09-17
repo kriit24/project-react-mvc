@@ -1,8 +1,6 @@
 import React from 'react';
 import { Alert, StatusBar } from 'react-native';
 
-global.ProjectReact_App = {};
-
 class ProjectReact extends React.Component {
   state = {
     content: null,
@@ -53,20 +51,6 @@ class ProjectReact extends React.Component {
     }
   }
 
-  export(object) {
-    let exportObject = true;
-    let keys = Object.keys(object);
-    keys.forEach((value, key) => {
-      if (global.ProjectReact_App[value] !== undefined) {
-        //Alert.alert('Export key "' + value + '" all ready exists');
-        exportObject = false;
-      }
-    });
-
-    if (exportObject)
-      global.ProjectReact_App = Object.assign(global.ProjectReact_App, object);
-  }
-
   component(content) {
     let stateObject = { content: content };
     if (this._willUnmount === false) {
@@ -86,7 +70,11 @@ class ProjectReact extends React.Component {
           reject();
         }
       }
-    } else {
+    }
+    else if (typeof content === 'object' && content.props.method !== undefined) {
+      this.component(content);
+    }
+    else {
       let params = Object.assign({}, content.props);
       let fn = content.type;
       fn.apply(null, new Array(params));
@@ -131,10 +119,12 @@ class ProjectReact extends React.Component {
   }
 }
 
-function App(app_object) {
-  if (app_object !== undefined) global.ProjectReact_App = app_object;
-
-  return global.ProjectReact_App;
+const ProjectApp = {
+  export: function(obj){
+    Object.keys(obj).forEach((key) => {
+      ProjectApp[key] = obj[key];
+    });
+  }
 }
 
-export { ProjectReact, App };
+export { ProjectReact, ProjectApp };
