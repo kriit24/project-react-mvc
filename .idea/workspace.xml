@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="first version">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="first version updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/controller/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/controller/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/form/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/popup/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/popup/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/form/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694835443909</updated>
-      <workItem from="1694835445165" duration="31254000" />
+      <workItem from="1694835445165" duration="31837000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -94,7 +90,19 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1694936264018</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="first version updated">
+      <created>1695026294002</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1695026294002</updated>
+    </task>
+    <task id="LOCAL−00007" summary="first version updated">
+      <created>1695026313805</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1695026313805</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first version" />
-    <option name="LAST_COMMIT_MESSAGE" value="first version" />
+    <MESSAGE value="first version updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="first version updated" />
   </component>
 </project>
