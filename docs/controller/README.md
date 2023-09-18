@@ -151,7 +151,7 @@ export function Index(data) {
                 //call controller method inside this controller
                 this.next()
                 //call controller method outside this controller
-                //<Another_Controller method="index"/>
+                //this.call(<Another_Controller method="index"/>)
             }} title="NEXT"/>
         </>
     );
@@ -167,7 +167,7 @@ export function Next() {
                 //call controller method inside this controller
                 this.index()
                 //call controller method outside this controller
-                //<Another_Controller method="other"/>
+                //this.call(<Another_Controller method="other"/>)
             }} title="BACK"/>
             <StatusBar style="auto"/>
         </View>
