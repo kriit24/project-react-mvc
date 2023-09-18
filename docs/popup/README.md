@@ -6,7 +6,7 @@ main App.js file
 ```
 import {Project, App, Popup} from 'project-react-mvc';
 
-export default class MApp extends Project.React {
+export default class MainApp extends Project.React {
 
     constructor() {
 

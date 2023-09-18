@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="first version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/controller/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/controller/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/form/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/popup/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/popup/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -61,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694835443909</updated>
-      <workItem from="1694835445165" duration="18259000" />
+      <workItem from="1694835445165" duration="31254000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -81,7 +82,19 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1694842572780</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="first version">
+      <created>1694936255524</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1694936255524</updated>
+    </task>
+    <task id="LOCAL−00005" summary="first version">
+      <created>1694936264018</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1694936264018</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

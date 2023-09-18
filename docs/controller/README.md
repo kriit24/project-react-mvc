@@ -4,27 +4,51 @@
 
 main App.js file
 ```
-import {Project, App} from 'project-react-mvc';
-import App_controller from "./App_controller";
+import {Project, App, Loader} from 'project-react-mvc';
+import IndexController from "./app/controller/index";
 
-export default class MApp extends Project.React {
+export default class MainApp extends Project.React {
+
+    state = {
+        'reload' : null
+    };
 
     constructor() {
 
         super();
         App.export({
+            Reload: () => {
+
+                this.setState({'reload' : new Date()});
+            },
             User: () => {
 
-                return 'some'
+                return {'user_name': 'some'};
             }
         });
     }
 
     render() {
+    
+        if( this.state.reload ){
+
+            setTimeout(() => {
+
+                this.setState({'reload' : null});
+
+            }, 1);
+
+            return (
+                <View style={styles.container}>
+                    <Loader/>
+                </View>
+            );
+        }
 
         return (
             <View style={styles.container}>
-                <App_controller method="index"/>
+                <IndexController method="index"/>
+                <IndexController method="footer"/>
             </View>
         );
     }
@@ -40,22 +64,25 @@ const styles = StyleSheet.create({
 });
 ```
 
-App_controller.js file
+/app/controller/index.js file
 
 ```
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {Loader, Project, App} from "project-react-mvc";
-import {Index, Next} from './App_view';
+import {Index, Next} from './app/view/index';
 
-export default class App_controller extends Project.React {
+export default class IndexController extends Project.React {
 
-    constructor() {
+    constructor(props) {
 
-        super();
-        this.view(
-            <Loader/>
-        );
+        super(props);
+        if (this.props.method === 'index') {
+
+            this.view(
+                <Loader/>
+            );
+        }
     }
 
     index() {
@@ -70,14 +97,25 @@ export default class App_controller extends Project.React {
 
     next() {
     
+        //get data async    
         address
         .where('address_id', 6)
         .fetch((row) => {
 
+            //replace view content
             this.view (
                 <Next data={row}/>
             );
         });
+    }
+    
+    footer(){
+    
+        this.view(
+            <View>
+                <Text>footer</Text>
+            </View>
+        );
     }
 }
 
@@ -94,15 +132,14 @@ const styles = StyleSheet.create({
 ```
 
 
-App_view.js file
+app/view/index.js file
 
 ```
 import React from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 import {StatusBar} from "expo-status-bar";
-//import App_Another_Controller from './App_controller_2';
+//import Another_Controller from './app/controller/another';
 
-//MENU
 export function Index(data) {
 
     return (
@@ -111,11 +148,10 @@ export function Index(data) {
             <Text>ADDRESS: {data.adr}</Text>
             <Button onPress={() => {
 
-                //if u return to the same controller
-                let App_controller = require('./App_controller').default;
-                this.call(
-                    <App_controller method="next"/>
-                )
+                //call controller method inside this controller
+                this.next()
+                //call controller method outside this controller
+                //<Another_Controller method="index"/>
             }} title="NEXT"/>
         </>
     );
@@ -128,11 +164,10 @@ export function Next() {
             <Text>THIS</Text>
             <Button onPress={() => {
 
-                //if u return to the same controller
-                let App_controller = require('./App_controller').default;
-                this.call(
-                    <App_controller method="index"/>
-                )
+                //call controller method inside this controller
+                this.index()
+                //call controller method outside this controller
+                //<Another_Controller method="other"/>
             }} title="BACK"/>
             <StatusBar style="auto"/>
         </View>

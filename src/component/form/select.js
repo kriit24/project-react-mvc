@@ -103,6 +103,16 @@ function popupSelected(options, selectedValue) {
 }
 
 function SelectDataToOptionList(data, selectedValue) {
+
+  if( data === undefined || !data )
+    return { initValue: '', optionsList: [] };
+
+  if( Array.isArray(data) && !data.length )
+    return { initValue: '', optionsList: [] };
+
+  if( !Array.isArray(data) && !Object.values(data).length )
+    return { initValue: '', optionsList: [] };
+
   let selected = Array.isArray(selectedValue) ? selectedValue : [selectedValue];
   let initValue = '';
   let arrayList = data;

@@ -4,11 +4,11 @@
 
 main App.js file
 ```
-import {Project, App, Form} from 'project-react-mvc';
-import Confirm from "../action/confirm";
-import AddRow from "../action/addrow";
+import {Project, Popup, Loader, App, Form, Validate} from 'project-react-mvc';
+import Confirm from "./app/action/confirm";
+import AddRow from "./app/action/addrow";
 
-export default class MApp extends Project.React {
+export default class MainApp extends Project.React {
 
     state = {
         'reload': null,
@@ -105,19 +105,19 @@ export default class MApp extends Project.React {
                                     success={(data, request) => {
     
                                         Popup.CloseLoader(0);
-                                        Popup.TopAlert(Popup.SuccessBackground('Data upload success')));
+                                        Popup.TopAlert(Popup.SuccessBackground('Data upload success'));
                                         Popup.CloseTopAlert(2000, () => {
                                         
-                                            App.reload();
+                                            App.Reload();
                                         });
                                     }}
                                     fail={(message, error, request) => {
     
                                         Popup.CloseLoader(0);
-                                        Popup.TopAlert(Popup.ErrorBackground('Data upload failed')));
+                                        Popup.TopAlert(Popup.ErrorBackground('Data upload failed'));
                                         Popup.CloseTopAlert(2000, () => {
                                             
-                                            App.reload();
+                                            App.Reload();
                                         });
                                     }}
                                 />
@@ -126,7 +126,7 @@ export default class MApp extends Project.React {
                         catch (error) {
                           
                             Popup.CloseLoader(0);
-                            Popup.TopAlert(Popup.ErrorBackground(error)));
+                            Popup.TopAlert(Popup.ErrorBackground(error));
                             Popup.CloseTopAlert(5000);
                         }
                     }}/>
@@ -145,7 +145,7 @@ export default class MApp extends Project.React {
                                 data={{id: json_data.id, status: 'STATUS_CONFIRMED'}}
                                 success={(data, request) => {
 
-                                    App.reload();
+                                    App.Reload();
                                 }}
                                 fail={(message, error, request) => {
 
@@ -170,12 +170,12 @@ const styles = StyleSheet.create({
 });
 ```
 
-action/confirm.js
+app/action/confirm.js
 
 ```
 import React from 'react';
 
-export default class onfirm {
+export default class Confirm {
 
     Index(props) {
 
@@ -188,12 +188,12 @@ export default class onfirm {
 ```
 
 
-action/addrow.js
+app/action/addrow.js
 
 ```
 import React from 'react';
 
-export default class YardAddRow {
+export default class AddRow {
 
     Index(props) {
 

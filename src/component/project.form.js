@@ -27,7 +27,7 @@ import {
 } from './form/input';
 import FormSwitch from './form/switch';
 import * as ImagePicker from 'expo-image-picker';
-import ProjectReact from './project.react';
+import canJSON from 'project-can-json';
 import unique_id from '../helper/unique_id';
 import Popup from '../helper/popup';
 import CameraBtn from './form/camera_btn';
@@ -41,6 +41,8 @@ const ProjectForm = CreateReactClass({
   submitName: null,
 
   Form(props) {
+
+    console.log('FORM', props.data);
     this.data = {};
     this.formData = {};
     this.onChangeEvents = {};
@@ -50,7 +52,7 @@ const ProjectForm = CreateReactClass({
     this.setData(props.data);
     if (props.children !== undefined) {
       return (
-        <KeyboardAwareScrollView
+        <View
           style={{ width: '100%', minWidth: '100%' }}
           contentContainerStyle={
             props.style !== undefined
@@ -59,7 +61,7 @@ const ProjectForm = CreateReactClass({
           }
         >
           {props.children}
-        </KeyboardAwareScrollView>
+        </View>
       );
     }
   },
@@ -69,7 +71,7 @@ const ProjectForm = CreateReactClass({
     data = data === undefined ? {} : data;
 
     //assume that json
-    ProjectReact.canJSON(
+    canJSON(
       data,
       (data) => {
         this.data = data;
