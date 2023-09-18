@@ -42,7 +42,6 @@ const ProjectForm = CreateReactClass({
 
   Form(props) {
 
-    console.log('FORM', props.data);
     this.data = {};
     this.formData = {};
     this.onChangeEvents = {};
