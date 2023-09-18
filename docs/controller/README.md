@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
 
 ```
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {Loader, Project, App} from "project-react-mvc";
 import {Index, Next} from './app/view/index';
 
