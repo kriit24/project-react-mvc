@@ -10,8 +10,9 @@ import {
   Dimensions,
   FlatList,
   Platform,
+  KeyboardAvoidingView,
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+//import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import {
   ResetSelectDefaults,
   SelectSingle,
@@ -50,17 +51,19 @@ const ProjectForm = CreateReactClass({
 
     this.setData(props.data);
     if (props.children !== undefined) {
+        let headerHeight = props.headerHeight !== undefined ? props.headerHeight : 75;
       return (
-        <View
-          style={{ width: '100%', minWidth: '100%' }}
-          contentContainerStyle={
-            props.style !== undefined
-              ? props.style
-              : { width: '100%', minWidth: '100%' }
-          }
+        <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            keyboardVerticalOffset={headerHeight}
+            style={
+              props.style !== undefined
+                  ? [{ width: '100%', minWidth: '100%' }, props.style]
+                  : { width: '100%', minWidth: '100%' }
+            }
         >
           {props.children}
-        </View>
+        </KeyboardAvoidingView>
       );
     }
   },
@@ -704,7 +707,8 @@ const ProjectForm = CreateReactClass({
     let style = props.style === undefined ? {} : props.style;
 
     let onDataChange = (value) => {
-      this.setValue(props.name, value, true);
+      this.setValue(props.name, value);
+      if( props.onChange !== undefined ) props.onChange(value);
     };
 
     return (
@@ -732,11 +736,9 @@ const ProjectForm = CreateReactClass({
       setPicture('Loading ...');
 
       let promiseResolve = null;
-      let promiseReject = null;
       this.onDataReady.push(
         new Promise((resolve, reject) => {
           promiseResolve = resolve;
-          promiseReject = reject;
         })
       );
 
@@ -745,7 +747,7 @@ const ProjectForm = CreateReactClass({
 
       if (requestPermission.granted === false) {
         alert('Permission to access image roll is required!');
-        promiseReject();
+        this.onDataReady.pop();
         return;
       }
 
@@ -787,7 +789,7 @@ const ProjectForm = CreateReactClass({
         promiseResolve();
       } else {
         setPicture(props.placeholder);
-        promiseReject();
+        this.onDataReady.pop();
       }
       return;
     };
@@ -817,11 +819,9 @@ const ProjectForm = CreateReactClass({
       setPicture('Loading ...');
 
       let promiseResolve = null;
-      let promiseReject = null;
       this.onDataReady.push(
         new Promise((resolve, reject) => {
           promiseResolve = resolve;
-          promiseReject = reject;
         })
       );
 
@@ -829,7 +829,7 @@ const ProjectForm = CreateReactClass({
 
       if (requestPermission.granted === false) {
         alert('Permission to access image roll is required!');
-        promiseReject();
+        this.onDataReady.pop();
         return;
       }
 
@@ -868,7 +868,7 @@ const ProjectForm = CreateReactClass({
         promiseResolve();
       } else {
         setPicture(props.placeholder);
-        promiseReject();
+        this.onDataReady.pop();
       }
       return;
     };

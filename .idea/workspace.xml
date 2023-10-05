@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="docs updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
@@ -29,21 +30,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src" />
@@ -58,7 +59,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694835443909</updated>
-      <workItem from="1694835445165" duration="34432000" />
+      <workItem from="1694835445165" duration="34569000" />
+      <workItem from="1696215472272" duration="84000" />
+      <workItem from="1696336582726" duration="17000" />
+      <workItem from="1696488842910" duration="2161000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -144,7 +148,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1695028707329</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="docs updated">
+      <created>1695038234993</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1695038234993</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
