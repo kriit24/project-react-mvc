@@ -20,21 +20,12 @@ class ProjectReact extends React.Component {
     if (this.props.method !== undefined) {
       let method = this.props.method;
       let props = this.props;
-      let args = [];
-      if (Object.values(props).length) {
-        Object.keys(props).forEach((key) => {
-          if (['method'].indexOf(key) === -1) {
-            args.push(props[key]);
-          }
-        });
-      }
-
       if (this[method] === undefined) {
         Alert.alert(
           'Method "' + method + '" not found @ "' + this.constructor.name + '"'
         );
       } else {
-        this[method].apply(this, args);
+        this[method].apply(this, [props]);
       }
     }
   }
@@ -77,7 +68,7 @@ class ProjectReact extends React.Component {
     else {
       let params = Object.assign({}, content.props);
       let fn = content.type;
-      fn.apply(null, new Array(params));
+      fn.apply(null, [params]);
     }
   }
 
@@ -108,7 +99,7 @@ class ProjectReact extends React.Component {
         : { ...this.props, ...action.props };
     let method =
       component.props.method !== undefined ? component.props.method : 'Index';
-    let content = action[method].apply(action, new Array(component.props));
+    let content = action[method].apply(action, [component.props]);
     if (content !== undefined) {
       this.component(content);
     }

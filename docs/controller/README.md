@@ -95,7 +95,7 @@ export default class IndexController extends Project.React {
         );
     }
 
-    next() {
+    next(props) {
     
         //get data async    
         address
@@ -149,9 +149,9 @@ export function Index(data) {
             <Button onPress={() => {
 
                 //call controller method inside this controller
-                this.next()
+                this.next({data: {'id': 1}})
                 //call controller method outside this controller
-                //this.call(<Another_Controller method="index"/>)
+                //this.call(<Another_Controller method="index" data={{'id': 1}}/>)
             }} title="NEXT"/>
         </>
     );
