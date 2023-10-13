@@ -12,9 +12,9 @@ export default class ProjectPromise {
 
     init(success, reject) {
 
-        Promise.all(this.promises).then(() => {
+        Promise.all(this.promises).then((values) => {
 
-            success.apply(this, arguments !== undefined ? arguments : [] );
+            success.apply(this, values !== undefined ? values : [] );
         }).catch((error) => {
 
             if( reject !== undefined )
