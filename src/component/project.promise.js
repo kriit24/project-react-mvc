@@ -1,4 +1,3 @@
-
 export default class ProjectPromise {
 
     promises = [];
@@ -14,11 +13,13 @@ export default class ProjectPromise {
 
         Promise.all(this.promises).then((values) => {
 
-            success.apply(this, values !== undefined ? values : [] );
+            success.apply(this, values !== undefined ? values : []);
         }).catch((error) => {
 
             if( reject !== undefined )
                 reject(error);
+            else
+                throw error
         });
     }
 }

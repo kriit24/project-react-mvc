@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="promise methods added">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="promise methods update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.promise.js" afterDir="false" />
@@ -65,7 +65,8 @@
       <workItem from="1697079241022" duration="347000" />
       <workItem from="1697098291701" duration="702000" />
       <workItem from="1697194338384" duration="297000" />
-      <workItem from="1697203730025" duration="7000" />
+      <workItem from="1697203730025" duration="55000" />
+      <workItem from="1697272492692" duration="19000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -175,7 +176,13 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1697194630143</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="promise methods update">
+      <created>1697203764026</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1697203764026</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +198,7 @@
     <MESSAGE value="Controller accepts input &quot;props&quot;" />
     <MESSAGE value="Controller  method accepts input &quot;props&quot;" />
     <MESSAGE value="promise methods added" />
-    <option name="LAST_COMMIT_MESSAGE" value="promise methods added" />
+    <MESSAGE value="promise methods update" />
+    <option name="LAST_COMMIT_MESSAGE" value="promise methods update" />
   </component>
 </project>
