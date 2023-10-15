@@ -9,12 +9,11 @@ import {
 } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import Popup from '../../helper/popup';
-import css from '../../assets/style';
 
 let selectedValue = [];
 let timeOutId = null;
 
-const SaveBtn = ({ submitButtonText, setSelectedValue }) => {
+const SaveBtn = ({ selectSubmitButton, setSelectedValue }) => {
   return (
     <TouchableOpacity
       onPress={() => {
@@ -41,13 +40,13 @@ const SaveBtn = ({ submitButtonText, setSelectedValue }) => {
           {},
         ]}
       >
-        {submitButtonText !== undefined ? submitButtonText : 'Submit'}
+        {selectSubmitButton !== undefined ? selectSubmitButton : 'Submit'}
       </Text>
     </TouchableOpacity>
   );
 };
 
-const CloseBtn = ({ submitButtonText, setSelectedValue }) => {
+const CloseBtn = ({ selectSubmitButton, setSelectedValue }) => {
     return (
         <TouchableOpacity
             onPress={() => {
@@ -74,13 +73,13 @@ const CloseBtn = ({ submitButtonText, setSelectedValue }) => {
                     {},
                 ]}
             >
-                {submitButtonText !== undefined ? submitButtonText : 'Close'}
+                {selectSubmitButton !== undefined ? selectSubmitButton : 'Close'}
             </Text>
         </TouchableOpacity>
     );
 };
 
-const SearchInput = ({ items, setItems, useSearch }) => {
+const SearchInput = ({ items, setItems, useSearch, searchText }) => {
   if (!useSearch) return null;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -112,7 +111,7 @@ const SearchInput = ({ items, setItems, useSearch }) => {
         }}
         value={null}
         defaultValue={searchValue}
-        placeholder={'Search'}
+        placeholder={searchText}
         editable={true}
         autoCapitalize={'none'}
       />
@@ -158,6 +157,7 @@ const SelectMultiElem = (props) => {
         items={origItems}
         setItems={setItems}
         useSearch={props.useSearch}
+        searchText={props.searchText}
       />
       <View
         style={{
@@ -183,7 +183,7 @@ const SelectMultiElem = (props) => {
             }}
         >
             <SaveBtn
-                submitButtonText={props.selectSubmitButton}
+                selectSubmitButton={props.selectSubmitButton}
                 setSelectedValue={props.setSelectedValue}
             />
         </View>
@@ -193,7 +193,7 @@ const SelectMultiElem = (props) => {
             }}
         >
             <CloseBtn
-                submitButtonText={props.closeSubmitButton}
+                selectSubmitButton={props.closeSubmitButton}
                 setSelectedValue={props.setSelectedValue}
             />
         </View>

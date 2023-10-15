@@ -28,6 +28,7 @@ function SelectSingle(props) {
         items={items}
         selectedValue={selectedValue}
         useSearch={props.useSearch}
+        searchText={props.searchText}
         selectSubmitButton={props.selectSubmitButton}
         closeSubmitButton={props.closeSubmitButton}
         setSelectedValue={(selected) => {
@@ -56,6 +57,7 @@ function SelectMulti(props) {
         items={items}
         selectedValue={selectedValue}
         useSearch={props.useSearch}
+        searchText={props.searchText}
         selectSubmitButton={props.selectSubmitButton}
         closeSubmitButton={props.closeSubmitButton}
         setSelectedValue={(selected) => {
@@ -74,7 +76,7 @@ function SelectPopupBtn(props) {
   );
   let selectLabel = SelectedLabel(props.items, selectedBtnValue)
     ? SelectedLabel(props.items, selectedBtnValue)[0]
-    : 'Select item';
+    : props.selectText;
 
   return (
     <TouchableOpacity

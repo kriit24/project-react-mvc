@@ -627,6 +627,7 @@ const ProjectForm = CreateReactClass({
             useSearch={true}
             selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
             closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
+            searchText={props.searchText !== undefined ? props.searchText : 'Search'}
           />
         </View>
       );
@@ -639,6 +640,7 @@ const ProjectForm = CreateReactClass({
           popup={popup}
           selectedValue={selectedValue}
           items={optionsList}
+          selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
         />
       </>
     );
@@ -681,6 +683,7 @@ const ProjectForm = CreateReactClass({
             useSearch={true}
             selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
             closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
+            searchText={props.searchText !== undefined ? props.searchText : 'Search'}
           />
         </View>
       );
@@ -693,6 +696,7 @@ const ProjectForm = CreateReactClass({
           popup={popup}
           selectedValue={selectedValue}
           items={optionsList}
+          selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
         />
       </>
     );
