@@ -52,7 +52,8 @@ export default class MainApp extends Project.React {
                 <Form.Form style={[css.content]} data={json_data}>
                     <Form.Label value={'label_article'}/>
                     
-                    //Hidden, Text, Number, Password is shorter for <Form.Input type="">
+                    {/*Hidden, Text, Number, Password is shorter for */}
+                    <Form.Input type="">
                     <Form.Hidden name="documentId" value={id}/>
                     <Form.Text name="quantity"/>
                     <Form.Number name="quantity"/>
@@ -67,6 +68,11 @@ export default class MainApp extends Project.React {
                     
                     <Form.Camera name="images" multiple={true}/>
                     <Form.Gallery name="images" multiple={true}/>
+                    
+                    {/*regular data label*/}
+                    <View style={[css.form_control]}>
+                        <Text>{json_data.descirption}</Text>
+                    </View>
                     
                     <Form.Select
                     name="articleId"
@@ -84,7 +90,7 @@ export default class MainApp extends Project.React {
                     closeSubmitButton={_tr('Close')}
                     options={articles}/>
                     
-                    //create row list
+                    {/*create row list*/}
                     <Form.Group>
                         <Form.Input name="quantity"/>
                         <Form.InputPopup name="quantity"/>
