@@ -16,10 +16,11 @@ export default class ProjectPromise {
             success.apply(this, values !== undefined ? values : []);
         }).catch((error) => {
 
-            if( reject !== undefined )
+            if (reject !== undefined)
                 reject(error);
-            else
+            if (!process.env.NODE_ENV || process.env.NODE_ENV === "development")
                 throw error
         });
+
     }
 }

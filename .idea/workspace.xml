@@ -66,7 +66,8 @@
       <workItem from="1697098291701" duration="702000" />
       <workItem from="1697194338384" duration="297000" />
       <workItem from="1697203730025" duration="55000" />
-      <workItem from="1697272492692" duration="19000" />
+      <workItem from="1697272492692" duration="89000" />
+      <workItem from="1697341076625" duration="13000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -182,7 +183,13 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1697203764026</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="promise methods update">
+      <created>1697272565553</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1697272565553</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
