@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="promise methods update">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="throw errors only on development mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/select_multi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/select_multi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/select_single.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/select_single.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,8 @@
       <workItem from="1697194338384" duration="297000" />
       <workItem from="1697203730025" duration="55000" />
       <workItem from="1697272492692" duration="89000" />
-      <workItem from="1697341076625" duration="13000" />
+      <workItem from="1697341076625" duration="54000" />
+      <workItem from="1697343495479" duration="102000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -189,7 +192,13 @@
       <option name="presentableId" value="LOCAL−00020" />
       <updated>1697272565553</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL−00021" summary="throw errors only on development mode">
+      <created>1697341118422</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1697341118422</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +215,7 @@
     <MESSAGE value="Controller  method accepts input &quot;props&quot;" />
     <MESSAGE value="promise methods added" />
     <MESSAGE value="promise methods update" />
-    <option name="LAST_COMMIT_MESSAGE" value="promise methods update" />
+    <MESSAGE value="throw errors only on development mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="throw errors only on development mode" />
   </component>
 </project>

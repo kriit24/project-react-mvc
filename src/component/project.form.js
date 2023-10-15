@@ -625,6 +625,8 @@ const ProjectForm = CreateReactClass({
             setSelectedValue={onDataChange}
             setSelectedBtnValue={setSelectedBtnValue}
             useSearch={true}
+            selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
+            closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
           />
         </View>
       );
@@ -677,6 +679,8 @@ const ProjectForm = CreateReactClass({
             setSelectedValue={onDataChange}
             setSelectedBtnValue={setSelectedBtnValue}
             useSearch={true}
+            selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
+            closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
           />
         </View>
       );

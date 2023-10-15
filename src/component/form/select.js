@@ -28,6 +28,8 @@ function SelectSingle(props) {
         items={items}
         selectedValue={selectedValue}
         useSearch={props.useSearch}
+        selectSubmitButton={props.selectSubmitButton}
+        closeSubmitButton={props.closeSubmitButton}
         setSelectedValue={(selected) => {
           props.setSelectedValue(selected);
           props.setSelectedBtnValue(selected);
@@ -54,6 +56,8 @@ function SelectMulti(props) {
         items={items}
         selectedValue={selectedValue}
         useSearch={props.useSearch}
+        selectSubmitButton={props.selectSubmitButton}
+        closeSubmitButton={props.closeSubmitButton}
         setSelectedValue={(selected) => {
           props.setSelectedValue(selected);
           props.setSelectedBtnValue(selected);

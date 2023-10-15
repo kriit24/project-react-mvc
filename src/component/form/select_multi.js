@@ -47,6 +47,39 @@ const SaveBtn = ({ submitButtonText, setSelectedValue }) => {
   );
 };
 
+const CloseBtn = ({ submitButtonText, setSelectedValue }) => {
+    return (
+        <TouchableOpacity
+            onPress={() => {
+                //setSelectedValue(selectedValue);
+                Popup.CloseAlert();
+            }}
+            style={[
+                {
+                    height: 40,
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: '#b81640',
+                },
+                {},
+            ]}
+        >
+            <Text
+                style={[
+                    {
+                        color: '#FFF',
+                        fontSize: 14,
+                    },
+                    {},
+                ]}
+            >
+                {submitButtonText !== undefined ? submitButtonText : 'Close'}
+            </Text>
+        </TouchableOpacity>
+    );
+};
+
 const SearchInput = ({ items, setItems, useSearch }) => {
   if (!useSearch) return null;
 
@@ -144,10 +177,26 @@ const SelectMultiElem = (props) => {
           extraData={selectedId}
         />
       </View>
-      <SaveBtn
-        submitButtonText={'Select'}
-        setSelectedValue={props.setSelectedValue}
-      />
+        <View
+            style={{
+                paddingTop: 5,
+            }}
+        >
+            <SaveBtn
+                submitButtonText={props.selectSubmitButton}
+                setSelectedValue={props.setSelectedValue}
+            />
+        </View>
+        <View
+            style={{
+                paddingTop: 5,
+            }}
+        >
+            <CloseBtn
+                submitButtonText={props.closeSubmitButton}
+                setSelectedValue={props.setSelectedValue}
+            />
+        </View>
     </View>
   );
 };
