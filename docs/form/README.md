@@ -68,8 +68,8 @@ export default class MainApp extends Project.React {
                     <Form.Camera name="images" multiple={true}/>
                     <Form.Gallery name="images" multiple={true}/>
                     
-                    <Form.Select name="articleId" submitButtonText={'Select ...'} options={articles}/>
-                    <Form.SelectMulti name="articleId" submitButtonText={'Select ...'} options={articles}/>
+                    <Form.Select name="articleId" submitButtonText={'Select ...'} selectSubmitButton={'Select'} closeSubmitButton={'Close'} options={articles}/>
+                    <Form.SelectMulti name="articleId" submitButtonText={'Select ...'} selectSubmitButton={'Select'} closeSubmitButton={'Close'}  options={articles}/>
                     
                     //create row list
                     <Form.Group>
