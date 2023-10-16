@@ -127,7 +127,7 @@ function SelectDataToOptionList(data, selectedValue) {
     let tmp = [];
 
     objectArray.forEach(([key, value]) => {
-      tmp.push({ key, value });
+      tmp.push({ 'value': key, 'label': value });
     });
     arrayList = tmp;
   }
