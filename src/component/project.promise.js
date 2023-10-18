@@ -1,26 +1,45 @@
 export default class ProjectPromise {
 
     promises = [];
+    values = [];
 
     push(callback) {
 
-        this.promises.push(new Promise((resolve, reject) => {
-            callback(resolve, reject);
-        }));
+        this.promises.push(
+            function (callback) {
+
+                return new Promise((resolve, reject) => {
+
+                    callback.apply({}, [resolve, reject, ...this.values]);
+                });
+            }.bind(this, callback)
+        );
     }
 
     init(success, reject) {
 
-        Promise.all(this.promises).then((values) => {
+        if (this.promises.length) {
 
-            success.apply(this, values !== undefined ? values : []);
-        }).catch((error) => {
+            let promise = this.promises.shift();
+            promise().then((res) => {
 
-            if (reject !== undefined)
-                reject(error);
-            if (!process.env.NODE_ENV || process.env.NODE_ENV === "development")
-                throw error
-        });
+                this.values.push(res);
+                this.init(success, reject);
+            }).catch((error) => {
 
+                this.promises = [];
+                this.values = [];
+                if (reject !== undefined)
+                    reject(error);
+                if (!process.env.NODE_ENV || process.env.NODE_ENV === "development")
+                    throw error
+            });
+        }
+        else{
+
+            success.apply(this, this.values);
+            this.values = [];
+            this.promises = [];
+        }
     }
 }

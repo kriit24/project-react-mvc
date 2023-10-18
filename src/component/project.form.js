@@ -225,6 +225,17 @@ const ProjectForm = CreateReactClass({
     );
   },
 
+  Data(props){
+
+    let value = this.getValue(props);
+
+    return (
+        <View style={[css.form_control, props.style]}>
+          <Text style={props.styleText !== undefined ? props.styleText : {}}>{value}</Text>
+        </View>
+    );
+  },
+
   Hidden(props) {
     let onChange = props.onChange;
     return this.Input({ ...props, ...{ type: 'hidden' } }, onChange);
