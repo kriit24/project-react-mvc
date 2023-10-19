@@ -177,6 +177,49 @@ export default class MainApp extends Project.React {
             </View>
         );
     }
+    
+    MultiFormInSinglePage(){
+    
+        let MultiForm = new Project.Form();
+
+        return (
+            <View key={client.client_id} style={style.accordion}>
+                <MultiForm.Form data={client}>
+                    <MultiForm.Hidden name="client_id"/>
+    
+                    <View style={{flexDirection: 'column'}}>
+                        <MultiForm.Label value={'TELEFON'}/>
+                        <MultiForm.Number name="client_phone"/>
+                    </View>
+    
+                    <View style={{flexDirection: 'column'}}>
+                        <MultiForm.Label value={'EMAIL'}/>
+                        <MultiForm.Text name="client_email"/>
+                    </View>
+    
+                    <View style={{flexDirection: 'column'}}>
+                        <MultiForm.Label value={'SÜNNIPÄEVA TEAVITUS EMAIL'}/>
+                        <MultiForm.Switch name="client_is_birthday_recipient_email" float="left" value={!!coalesce(client.client_is_birthday_recipient_email)}/>
+                    </View>
+    
+                    <View style={{flexDirection: 'column'}}>
+                        <MultiForm.Label value={'SÜNNIPÄEVA TEAVITUS SMS'}/>
+                        <MultiForm.Switch name="client_is_birthday_recipient_sms" float="left" value={!!coalesce(client.client_is_birthday_recipient_sms)}/>
+                    </View>
+    
+                    <MultiForm.Button
+                        name="SaveClientContact"
+                        value={_tr('Salvesta')}
+                        onPress={async (data_1) => {
+    
+                            Popup.Loader();
+                            let data = await MultiForm.getData();
+                        }}
+                    />
+                </MultiForm.Form>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({

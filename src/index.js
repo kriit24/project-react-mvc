@@ -15,7 +15,7 @@ const Project = {
 
 const App = ProjectApp;
 const Form = new ProjectForm();
-const Validate = Project.Validate;
+const Validate = new Project.Validate();
 const ScrollView = (props) => {
   return new ProjectForm().ScrollView(props);
 };

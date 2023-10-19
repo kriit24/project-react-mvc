@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="array list to option list conversion fix">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Form data element added, sequential promise added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/form/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,9 @@
       <workItem from="1697542983273" duration="28000" />
       <workItem from="1697544322744" duration="23000" />
       <workItem from="1697545762058" duration="5000" />
-      <workItem from="1697603371370" duration="36000" />
+      <workItem from="1697603371370" duration="79000" />
+      <workItem from="1697626791380" duration="108000" />
+      <workItem from="1697698749916" duration="21000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -234,7 +237,13 @@
       <option name="presentableId" value="LOCAL−00026" />
       <updated>1697425838068</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL−00027" summary="Form data element added, sequential promise added">
+      <created>1697603448346</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1697603448346</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +263,7 @@
     <MESSAGE value="throw errors only on development mode" />
     <MESSAGE value="dynamic select button text and close button text" />
     <MESSAGE value="array list to option list conversion fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="array list to option list conversion fix" />
+    <MESSAGE value="Form data element added, sequential promise added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form data element added, sequential promise added" />
   </component>
 </project>
