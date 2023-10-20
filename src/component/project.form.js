@@ -27,7 +27,7 @@ import {
   InputPopupRightBtn,
 } from './form/input';
 import FormSwitch from './form/switch';
-import Checkbox from 'expo-checkbox';
+import CheckBox from './form/checkbox';
 import * as ImagePicker from 'expo-image-picker';
 import canJSON from 'project-can-json';
 import unique_id from '../helper/unique_id';
@@ -100,6 +100,7 @@ const ProjectForm = CreateReactClass({
   },
 
   getData() {
+
     let mergeData = () => {
       let formData = Object.assign(
         Object.create(Object.getPrototypeOf(this.formData)),
@@ -748,8 +749,7 @@ const ProjectForm = CreateReactClass({
   CheckBox(props){
 
       let value = this.getValue(props, false);
-      const [isChecked, setChecked] = React.useState(value);
-    this.setValue(props.name, value);
+    this.setValue(props.name, value ? 1 : 0);
     let propsStyle = props.style !== undefined ? props.style : {};
     let style = {
       ...css.form_control,
@@ -758,19 +758,18 @@ const ProjectForm = CreateReactClass({
 
     let onDataChange = (value) => {
 
-      this.setValue(props.name, value);
-      if( props.onChange !== undefined ) props.onChange(value);
-        setChecked(value);
+      this.setValue(props.name, value ? 1 : 0);
+      if( props.onChange !== undefined ) props.onChange(value ? 1 : 0);
     };
 
     if(props.text !== undefined){
 
       return <View style={[{flexDirection: 'row', width: '100%'}, style]}>
-      <Checkbox
+      <CheckBox
             style={[css.form_control, {padding: 15}]}
             disabled={props.disabled !== undefined ? props.disabled : false}
-            value={isChecked}
-            onValueChange={(newValue) => onDataChange(newValue ? true : false)}
+            value={value}
+            onDataChange={onDataChange}
         />
         <View style={{marginLeft: 10, marginTop: 10}}>
           <Text>{props.text}</Text>
@@ -779,11 +778,11 @@ const ProjectForm = CreateReactClass({
     }
 
     return <View style={[{flexDirection: 'column', width: '100%'}, style]}>
-      <Checkbox
+      <CheckBox
           style={[css.form_control, {padding: 15}]}
         disabled={props.disabled !== undefined ? props.disabled: false}
-        value={isChecked}
-          onValueChange={(newValue) => onDataChange(newValue ? true : false)}
+        value={value}
+          onDataChange={onDataChange}
       />
     </View>;
   },

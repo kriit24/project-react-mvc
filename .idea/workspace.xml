@@ -29,23 +29,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/src/component/form",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\component\form" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\component" />
     </key>
@@ -79,7 +80,9 @@
       <workItem from="1697603371370" duration="79000" />
       <workItem from="1697626791380" duration="108000" />
       <workItem from="1697698749916" duration="43000" />
-      <workItem from="1697788566521" duration="1976000" />
+      <workItem from="1697788566521" duration="1997000" />
+      <workItem from="1697800547771" duration="20000" />
+      <workItem from="1697802415923" duration="137000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -249,7 +252,13 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1697698788552</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL−00029" summary="Form checkbox added">
+      <created>1697792348047</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1697792348047</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
