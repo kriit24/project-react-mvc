@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Form data element added, sequential promise added">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Form checkbox added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/form/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,8 @@
       <workItem from="1697545762058" duration="5000" />
       <workItem from="1697603371370" duration="79000" />
       <workItem from="1697626791380" duration="108000" />
-      <workItem from="1697698749916" duration="21000" />
+      <workItem from="1697698749916" duration="43000" />
+      <workItem from="1697788566521" duration="1976000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -243,7 +243,13 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1697603448346</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="Form data validation added">
+      <created>1697698788552</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1697698788552</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +270,8 @@
     <MESSAGE value="dynamic select button text and close button text" />
     <MESSAGE value="array list to option list conversion fix" />
     <MESSAGE value="Form data element added, sequential promise added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form data element added, sequential promise added" />
+    <MESSAGE value="Form data validation added" />
+    <MESSAGE value="Form checkbox added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form checkbox added" />
   </component>
 </project>

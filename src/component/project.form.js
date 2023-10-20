@@ -27,12 +27,14 @@ import {
   InputPopupRightBtn,
 } from './form/input';
 import FormSwitch from './form/switch';
+import Checkbox from 'expo-checkbox';
 import * as ImagePicker from 'expo-image-picker';
 import canJSON from 'project-can-json';
 import unique_id from '../helper/unique_id';
 import Popup from '../helper/popup';
 import CameraBtn from './form/camera_btn';
 import css from '../assets/style';
+
 
 const ProjectForm = CreateReactClass({
   data: {},
@@ -740,6 +742,50 @@ const ProjectForm = CreateReactClass({
         float={props.float}
       />
     );
+  },
+
+
+  CheckBox(props){
+
+      let value = this.getValue(props, false);
+      const [isChecked, setChecked] = React.useState(value);
+    this.setValue(props.name, value);
+    let propsStyle = props.style !== undefined ? props.style : {};
+    let style = {
+      ...css.form_control,
+      ...propsStyle
+    };
+
+    let onDataChange = (value) => {
+
+      this.setValue(props.name, value);
+      if( props.onChange !== undefined ) props.onChange(value);
+        setChecked(value);
+    };
+
+    if(props.text !== undefined){
+
+      return <View style={[{flexDirection: 'row', width: '100%'}, style]}>
+      <Checkbox
+            style={[css.form_control, {padding: 15}]}
+            disabled={props.disabled !== undefined ? props.disabled : false}
+            value={isChecked}
+            onValueChange={(newValue) => onDataChange(newValue ? true : false)}
+        />
+        <View style={{marginLeft: 10, marginTop: 10}}>
+          <Text>{props.text}</Text>
+        </View>
+      </View>;
+    }
+
+    return <View style={[{flexDirection: 'column', width: '100%'}, style]}>
+      <Checkbox
+          style={[css.form_control, {padding: 15}]}
+        disabled={props.disabled !== undefined ? props.disabled: false}
+        value={isChecked}
+          onValueChange={(newValue) => onDataChange(newValue ? true : false)}
+      />
+    </View>;
   },
 
   /*
