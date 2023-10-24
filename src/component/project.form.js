@@ -56,7 +56,7 @@ const ProjectForm = CreateReactClass({
         let headerHeight = props.headerHeight !== undefined ? props.headerHeight : 75;
       return (
         <KeyboardAvoidingView
-            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            behavior={Platform.OS === "ios" ? "padding" : undefined}
             keyboardVerticalOffset={headerHeight}
             style={
               props.style !== undefined
