@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CheckBox(props) {
 
-    const [isChecked, setChecked] = React.useState(props.value);
+    const [isChecked, setChecked] = React.useState(props.value ? true : false);
 
     return <Checkbox
         style={props.style}
