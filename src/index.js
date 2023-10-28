@@ -16,8 +16,20 @@ const Project = {
 const App = ProjectApp;
 const Form = new ProjectForm();
 const Validate = new Project.Validate();
+/*
+let scrollRef = React.useRef();
+<ScrollView _ref={scrollRef}>
+
+    <TouchableOpacity onPress={(state) => {
+
+        scrollRef.current.scrollToOffset({ animated: true, offset: 0 });
+    }}>
+        <Text>{title}</Text>
+    </TouchableOpacity>
+</ScrollView>
+ */
 const ScrollView = (props) => {
-  return new ProjectForm().ScrollView(props);
+    return new ProjectForm().ScrollView(props);
 };
 
 export { Project, ScrollView, Form, Validate, Popup, Loader, App };

@@ -4,7 +4,7 @@
 
 main App.js file
 ```
-import {Project, Popup, Loader, App, Form, Validate} from 'project-react-mvc';
+import {Project, Popup, Loader, App, Form, Validate, ScrollView} from 'project-react-mvc';
 import Confirm from "./app/action/confirm";
 import AddRow from "./app/action/addrow";
 
@@ -218,6 +218,22 @@ export default class MainApp extends Project.React {
                     />
                 </MultiForm.Form>
             </View>
+        );
+    }
+    
+    ScrollView(){
+    
+        return (
+            let scrollRef = React.useRef();
+            <ScrollView _ref={scrollRef}>
+            
+                <TouchableOpacity onPress={(state) => {
+            
+                    scrollRef.current.scrollToOffset({ animated: true, offset: 0 });
+                }}>
+                    <Text>{'SAVE'}</Text>
+                </TouchableOpacity>
+            </ScrollView>
         );
     }
 }

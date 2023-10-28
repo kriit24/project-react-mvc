@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Form checkbox updated">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/form/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +85,12 @@
       <workItem from="1697788566521" duration="1997000" />
       <workItem from="1697800547771" duration="20000" />
       <workItem from="1697802415923" duration="154000" />
-      <workItem from="1698118167481" duration="16000" />
+      <workItem from="1698118167481" duration="140000" />
+      <workItem from="1698118358424" duration="25000" />
+      <workItem from="1698121340452" duration="16000" />
+      <workItem from="1698121514879" duration="9000" />
+      <workItem from="1698293097849" duration="264000" />
+      <workItem from="1698468561728" duration="216000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -265,7 +272,31 @@
       <option name="presentableId" value="LOCAL−00030" />
       <updated>1697802563057</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL−00031" summary="Form keyboardavoiding view behavior fix">
+      <created>1698118205703</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1698118205703</updated>
+    </task>
+    <task id="LOCAL−00032" summary="Form checkbox installed">
+      <created>1698118293003</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1698118293003</updated>
+    </task>
+    <task id="LOCAL−00033" summary="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed">
+      <created>1698293328022</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1698293328022</updated>
+    </task>
+    <task id="LOCAL−00034" summary="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed">
+      <created>1698293336256</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1698293336256</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +320,9 @@
     <MESSAGE value="Form data validation added" />
     <MESSAGE value="Form checkbox added" />
     <MESSAGE value="Form checkbox updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form checkbox updated" />
+    <MESSAGE value="Form keyboardavoiding view behavior fix" />
+    <MESSAGE value="Form checkbox installed" />
+    <MESSAGE value="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed" />
   </component>
 </project>

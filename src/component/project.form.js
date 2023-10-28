@@ -199,8 +199,11 @@ const ProjectForm = CreateReactClass({
       return null;
     }
 
+    const flatListRef = React.useRef();
+
     return (
       <FlatList
+          ref={props._ref !== undefined ? props._ref : flatListRef}
         ListEmptyComponent={<>{props.children}</>}
         data={null}
         renderItem={null}
