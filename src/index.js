@@ -32,4 +32,14 @@ const ScrollView = (props) => {
     return new ProjectForm().ScrollView(props);
 };
 
-export { Project, ScrollView, Form, Validate, Popup, Loader, App };
+function Bind(props) {
+
+    let component = props.children;
+    let Source = Object.assign({}, component);
+    if (typeof Source.type === 'function') {
+        Source.type = Source.type.bind(props.bind);
+    }
+    return Source;
+}
+
+export { Project, ScrollView, Form, Validate, Popup, Loader, App, Bind };
