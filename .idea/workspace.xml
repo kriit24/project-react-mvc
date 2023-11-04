@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="added scrollview ref">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="new Bind method added to component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/camera_btn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/camera_btn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,8 @@
       <workItem from="1698121514879" duration="9000" />
       <workItem from="1698293097849" duration="264000" />
       <workItem from="1698468561728" duration="299000" />
-      <workItem from="1698895873797" duration="23000" />
+      <workItem from="1698895873797" duration="99000" />
+      <workItem from="1699076983273" duration="459000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -301,7 +304,13 @@
       <option name="presentableId" value="LOCAL−00035" />
       <updated>1698468849097</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL−00036" summary="new Bind method added to component">
+      <created>1698895950325</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1698895950325</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +338,7 @@
     <MESSAGE value="Form checkbox installed" />
     <MESSAGE value="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed" />
     <MESSAGE value="added scrollview ref" />
-    <option name="LAST_COMMIT_MESSAGE" value="added scrollview ref" />
+    <MESSAGE value="new Bind method added to component" />
+    <option name="LAST_COMMIT_MESSAGE" value="new Bind method added to component" />
   </component>
 </project>

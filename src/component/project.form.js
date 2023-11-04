@@ -801,7 +801,7 @@ const ProjectForm = CreateReactClass({
   Gallery(props) {
     let onChange = props.onChange;
     let onPress = async (setPicture) => {
-      setPicture('Loading ...');
+      setPicture(props.loading !== undefined ? props.loading : 'Loading ...');
 
       let promiseResolve = null;
       this.onDataReady.push(
@@ -829,7 +829,6 @@ const ProjectForm = CreateReactClass({
       //let xResult = await ImagePicker.getPendingResultAsync();
 
       if (!result.canceled) {
-        setPicture('Picture loaded');
 
         if (props.multiple) {
           let value =
@@ -843,6 +842,7 @@ const ProjectForm = CreateReactClass({
           );
           value.push({ fileName: filename, image: result.assets[0].base64 });
           this.setValue(props.name, value, true);
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded ('+value.length+'pc)');
         } else {
           let filename = result.assets[0].uri.substring(
             result.assets[0].uri.lastIndexOf('/') + 1,
@@ -850,16 +850,40 @@ const ProjectForm = CreateReactClass({
           );
           this.setValue(
             props.name,
-            { fileName: filename, image: result.assets[0].base64 },
+            [{ fileName: filename, image: result.assets[0].base64 }],
             true
           );
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded ('+value.length+'pc)');
         }
         promiseResolve();
       } else {
-        setPicture(props.placeholder);
         this.onDataReady.pop();
+        setPicture(props.placeholder);
       }
       return;
+    };
+
+    let onDelete = async (elemName, imageName, setPicture) => {
+
+        let value = this.formData[elemName] !== undefined && this.formData[elemName] !== null ? this.formData[elemName] : [];
+      if( value.length ){
+
+          let tmp = [];
+          let c = value.length;
+          for(let i = 0; i < c; i++){
+
+              let row = value[i];
+              if( row.fileName != imageName )
+                  tmp.push(row);
+          }
+          this.setValue(elemName, tmp, true);
+          tmp = [];
+
+          if( this.formData[elemName].length )
+            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : 'Picture loaded ('+this.formData[elemName].length+'pc)');
+          else
+            setPicture(props.placeholder);
+      }
     };
 
     let style = props.style !== undefined ? props.style : css.form_control;
@@ -867,9 +891,11 @@ const ProjectForm = CreateReactClass({
 
     return (
       <CameraBtn
+          {...props}
         style={style}
-        placeholder={props.placeholder}
         onPress={onPress}
+        onDelete={onDelete}
+        parent={this}
       />
     );
   },
@@ -884,7 +910,7 @@ const ProjectForm = CreateReactClass({
   Camera(props) {
     let onChange = props.onChange;
     let onPress = async (setPicture) => {
-      setPicture('Loading ...');
+      setPicture(props.loading !== undefined ? props.loading : 'Loading ...');
 
       let promiseResolve = null;
       this.onDataReady.push(
@@ -916,7 +942,6 @@ const ProjectForm = CreateReactClass({
           result.assets[0].uri.lastIndexOf('/') + 1,
           result.assets[0].uri.length
         );
-        setPicture('Picture loaded');
 
         if (props.multiple) {
           let value =
@@ -926,30 +951,57 @@ const ProjectForm = CreateReactClass({
               : [];
           value.push({ fileName: filename, image: result.assets[0].base64 });
           this.setValue(props.name, value, true);
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded ('+value.length+'pc)');
         } else {
           this.setValue(
             props.name,
-            { fileName: filename, image: result.assets[0].base64 },
+            [{ fileName: filename, image: result.assets[0].base64 }],
             true
           );
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded');
         }
         promiseResolve();
       } else {
-        setPicture(props.placeholder);
         this.onDataReady.pop();
+        setPicture(props.placeholder);
       }
       return;
+    };
+
+    let onDelete = async (elemName, imageName, setPicture) => {
+
+      let value = this.formData[elemName] !== undefined && this.formData[elemName] !== null ? this.formData[elemName] : [];
+      if( value.length ){
+
+        let tmp = [];
+        let c = value.length;
+        for(let i = 0; i < c; i++){
+
+          let row = value[i];
+          if( row.fileName != imageName )
+            tmp.push(row);
+        }
+        this.setValue(elemName, tmp, true);
+        tmp = [];
+
+        if( this.formData[elemName].length )
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : 'Picture loaded ('+this.formData[elemName].length+'pc)');
+        else
+          setPicture(props.placeholder);
+      }
     };
 
     let style = props.style !== undefined ? props.style : css.form_control;
     this.onChangeEvents[props.name] = onChange;
 
     return (
-      <CameraBtn
-        style={style}
-        placeholder={props.placeholder}
-        onPress={onPress}
-      />
+        <CameraBtn
+            {...props}
+            style={style}
+            onPress={onPress}
+            onDelete={onDelete}
+            parent={this}
+        />
     );
   },
 
