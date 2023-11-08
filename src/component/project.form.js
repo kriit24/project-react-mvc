@@ -358,6 +358,7 @@ const ProjectForm = CreateReactClass({
             }}
             value={null}
             defaultValue={this.setValue(props.name, value)}
+            placeholder={props.placeholder}
             editable={false}
             {...attr}
           />
@@ -374,6 +375,7 @@ const ProjectForm = CreateReactClass({
           }}
           value={null}
           defaultValue={this.setValue(props.name, value)}
+          placeholder={props.placeholder}
           {...attr}
         />
       </View>
