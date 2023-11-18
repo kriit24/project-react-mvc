@@ -24,7 +24,7 @@ export default function Radio(props) {
 
         if( props.disabled === undefined || !props.disabled ) {
 
-            props.onDataChange(props.value);
+            props.onDataChange(true);
             setChecked(true);
             if (previousSetChecked[props.name] !== undefined) previousSetChecked[props.name](false);
             previousSetChecked[props.name] = setChecked;
