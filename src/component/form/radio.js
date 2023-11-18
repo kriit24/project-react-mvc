@@ -17,6 +17,7 @@ export default function Radio(props) {
 
         return <TouchableOpacity style={props.style}>
             <Ionicons name="radio-button-on" size={24} color="black"/>
+            {props.children !== undefined ? props.children : null}
         </TouchableOpacity>;
     }
     return <TouchableOpacity style={props.style} onPress={() => {
@@ -30,5 +31,6 @@ export default function Radio(props) {
         }
     }}>
         <Ionicons name="radio-button-off" size={24} color={props.disabled ? 'grey' : 'black'}/>
+        {props.children !== undefined ? props.children : null}
     </TouchableOpacity>;
 }
