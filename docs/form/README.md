@@ -59,6 +59,8 @@ export default class MainApp extends Project.React {
                     <Form.Number name="quantity"/>
                     <Form.Password name="quantity"/>
                     <Form.Switch name="quantity_type" float="left" value={true}/>
+                    <Form.CheckBox name="name" value={1} text={'Text'}/>
+                    <Form.Radio name="name" value={1} text={'Text'}/>
                     
                     <Form.Input name="quantity"/>
                     <Form.InputPopup name="quantity"/>

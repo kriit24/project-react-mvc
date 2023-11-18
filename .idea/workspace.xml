@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="behavior default">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="radio button added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/form/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <workItem from="1699083751511" duration="604000" />
       <workItem from="1699430386731" duration="157000" />
       <workItem from="1699591140791" duration="317000" />
-      <workItem from="1700283328269" duration="211000" />
+      <workItem from="1700283328269" duration="404000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -329,14 +329,19 @@
       <option name="presentableId" value="LOCAL−00039" />
       <updated>1699591442954</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL−00040" summary="radio button added">
+      <created>1700283579418</created>
+      <option name="number" value="LOCAL−00040" />
+      <option name="presentableId" value="LOCAL−00040" />
+      <updated>1700283579418</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first version" />
     <MESSAGE value="first version updated" />
     <MESSAGE value="description updated" />
     <MESSAGE value="keywords updated" />
@@ -361,6 +366,7 @@
     <MESSAGE value="camera thmb added and image deletion added" />
     <MESSAGE value="---&#10;camera thmb added and image deletion added&#10;&#10;---&#10;promise args added" />
     <MESSAGE value="behavior default" />
-    <option name="LAST_COMMIT_MESSAGE" value="behavior default" />
+    <MESSAGE value="radio button added" />
+    <option name="LAST_COMMIT_MESSAGE" value="radio button added" />
   </component>
 </project>
