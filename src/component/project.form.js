@@ -771,16 +771,17 @@ const ProjectForm = CreateReactClass({
 
     if(props.text !== undefined){
 
-      return <View style={[{flexDirection: 'row', width: '100%'}, style]}>
+      return <View style={style}>
       <CheckBox
-            style={[css.form_control, {padding: 15}]}
+            style={[css.form_control, {flexDirection: 'row', width: '100%', padding: 15}]}
             disabled={props.disabled !== undefined ? props.disabled : false}
             value={value}
             onDataChange={onDataChange}
-        />
-        <View style={{marginLeft: 10, marginTop: 10}}>
-          <Text>{props.text}</Text>
+        >
+        <View style={{justifyContent: 'center',marginLeft: 10}}>
+          <Text style={{color: props.disabled ? 'grey' : 'black'}}>{props.text}</Text>
         </View>
+      </CheckBox>
       </View>;
     }
 

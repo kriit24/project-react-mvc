@@ -16,7 +16,7 @@ export default function Radio(props) {
     if( isChecked ) {
 
         return <TouchableOpacity style={props.style}>
-            <Ionicons name="radio-button-on" size={24} color="black"/>
+            <Ionicons name="radio-button-on" size={32} color="black"/>
             {props.children !== undefined ? props.children : null}
         </TouchableOpacity>;
     }
@@ -24,13 +24,13 @@ export default function Radio(props) {
 
         if( props.disabled === undefined || !props.disabled ) {
 
-            props.onDataChange(true);
-            setChecked(props.value);
+            props.onDataChange(props.value);
+            setChecked(true);
             if (previousSetChecked[props.name] !== undefined) previousSetChecked[props.name](false);
             previousSetChecked[props.name] = setChecked;
         }
     }}>
-        <Ionicons name="radio-button-off" size={24} color={props.disabled ? 'grey' : 'black'}/>
+        <Ionicons name="radio-button-off" size={32} color={props.disabled ? 'grey' : 'black'}/>
         {props.children !== undefined ? props.children : null}
     </TouchableOpacity>;
 }

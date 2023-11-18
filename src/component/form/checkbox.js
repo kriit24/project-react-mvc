@@ -1,19 +1,36 @@
-import Checkbox from 'expo-checkbox';
+import {Ionicons} from '@expo/vector-icons';
 import React from "react";
+import {TouchableOpacity, View} from "react-native";
 
-export default function CheckBox(props) {
+export default function Radio(props) {
 
-    const [isChecked, setChecked] = React.useState(props.value ? true : false);
+    const [isChecked, setChecked] = React.useState(props.checked);
+    //style,disabled
 
-    return <Checkbox
-        style={props.style}
-        disabled={props.disabled}
-        value={isChecked}
-        onValueChange={(newValue) => {
+    if (isChecked) {
 
-            props.onDataChange(newValue ? true : false);
-            setChecked(newValue);
+        return <TouchableOpacity style={props.style} onPress={() => {
+
+            if (props.disabled === undefined || !props.disabled) {
+
+                props.onDataChange(null);
+                setChecked(false);
+            }
+        }}>
+            <Ionicons name="checkbox" size={32} color="black"/>
+            {props.children !== undefined ? props.children : null}
+        </TouchableOpacity>;
+    }
+    return <TouchableOpacity style={props.style} onPress={() => {
+
+        if (props.disabled === undefined || !props.disabled) {
+
+            props.onDataChange(props.value);
+            setChecked(true);
         }
-        }
-    />;
+    }}>
+        <Ionicons name="checkbox-outline" size={32} color={props.disabled ? 'grey' : 'black'}/>
+        <View style={{width: 20, height: 20, backgroundColor: 'white', marginTop: 20.5, marginLeft: 19.5, position: 'absolute'}}/>
+        {props.children !== undefined ? props.children : null}
+    </TouchableOpacity>;
 }
