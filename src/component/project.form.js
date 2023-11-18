@@ -756,7 +756,7 @@ const ProjectForm = CreateReactClass({
   CheckBox(props){
 
       let value = this.getValue(props, false);
-    this.setValue(props.name, value ? 1 : 0);
+    this.setValue(props.name, props.checked ? props.value : null);
     let propsStyle = props.style !== undefined ? props.style : {};
     let style = {
       ...css.form_control,
@@ -798,7 +798,7 @@ const ProjectForm = CreateReactClass({
   Radio(props){
 
     let value = this.getValue(props, false);
-    this.setValue(props.name, value ? 1 : 0);
+    this.setValue(props.name, props.checked ? props.value : null);
     let propsStyle = props.style !== undefined ? props.style : {};
     let style = {
       ...css.form_control,

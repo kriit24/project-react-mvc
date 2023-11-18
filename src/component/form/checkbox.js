@@ -13,7 +13,7 @@ export default function Radio(props) {
 
             if (props.disabled === undefined || !props.disabled) {
 
-                props.onDataChange(false);
+                props.onDataChange(null);
                 setChecked(false);
             }
         }}>
@@ -25,7 +25,7 @@ export default function Radio(props) {
 
         if (props.disabled === undefined || !props.disabled) {
 
-            props.onDataChange(true);
+            props.onDataChange(props.value);
             setChecked(true);
         }
     }}>
