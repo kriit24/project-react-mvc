@@ -28,6 +28,7 @@ import {
 } from './form/input';
 import FormSwitch from './form/switch';
 import CheckBox from './form/checkbox';
+import Radio from './form/radio';
 import * as ImagePicker from 'expo-image-picker';
 import canJSON from 'project-can-json';
 import unique_id from '../helper/unique_id';
@@ -788,6 +789,51 @@ const ProjectForm = CreateReactClass({
           style={[css.form_control, {padding: 15}]}
         disabled={props.disabled !== undefined ? props.disabled: false}
         value={value}
+          onDataChange={onDataChange}
+      />
+    </View>;
+  },
+
+  Radio(props){
+
+    let value = this.getValue(props, false);
+    this.setValue(props.name, value ? 1 : 0);
+    let propsStyle = props.style !== undefined ? props.style : {};
+    let style = {
+      ...css.form_control,
+      ...propsStyle
+    };
+
+    let onDataChange = (value) => {
+
+      this.setValue(props.name, value ? 1 : 0);
+      if( props.onChange !== undefined ) props.onChange(value ? 1 : 0);
+    };
+
+    if(props.text !== undefined){
+
+      return <View style={[css.form_control, {flexDirection: 'row', width: '100%'}, style]}>
+        <Radio
+            style={{padding: 15}}
+            disabled={props.disabled !== undefined ? props.disabled : false}
+            name={props.name}
+            value={value}
+            checked={props.checked !== undefined ? props.checked : false}
+            onDataChange={onDataChange}
+        />
+        <View style={{justifyContent: 'center',marginLeft: 10}}>
+          <Text style={{color: props.disabled ? 'grey' : 'black'}}>{props.text}</Text>
+        </View>
+      </View>;
+    }
+
+    return <View style={[{flexDirection: 'column', width: '100%'}, style]}>
+      <Radio
+          style={[css.form_control, {padding: 15}]}
+          disabled={props.disabled !== undefined ? props.disabled: false}
+          name={props.name}
+          value={value}
+          checked={props.checked !== undefined ? props.checked : false}
           onDataChange={onDataChange}
       />
     </View>;
