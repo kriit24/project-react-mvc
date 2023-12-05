@@ -807,8 +807,8 @@ const ProjectForm = CreateReactClass({
 
     let onDataChange = (value) => {
 
-      this.setValue(props.name, value ? 1 : 0);
-      if( props.onChange !== undefined ) props.onChange(value ? 1 : 0);
+      this.setValue(props.name, value);
+      if( props.onChange !== undefined ) props.onChange(value);
     };
 
     if(props.text !== undefined){
@@ -1058,7 +1058,7 @@ const ProjectForm = CreateReactClass({
   Button(props) {
     let onPress = props.onPress;
     let style = props.style !== undefined ? props.style : css.btn;
-    let btn_txt = props.style_txt !== undefined ? props.style_txt : css.btn_txt;
+    let btn_txt = props.styleText !== undefined ? props.styleText : css.btn_txt;
     let attr = props.attr !== undefined ? props.attr : {};
     if (attr.disabled !== undefined && attr.disabled)
       style = { ...style, ...css.btn_disabled };

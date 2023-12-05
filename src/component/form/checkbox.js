@@ -2,7 +2,7 @@ import {Ionicons} from '@expo/vector-icons';
 import React from "react";
 import {TouchableOpacity, View} from "react-native";
 
-export default function Radio(props) {
+export default function CheckBox(props) {
 
     const [isChecked, setChecked] = React.useState(props.checked);
     //style,disabled

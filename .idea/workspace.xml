@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="checkbox and radio updated">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="---&#10;style_txt renamed to styleText">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/form/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/form/radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/radio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +96,12 @@
       <workItem from="1699591140791" duration="317000" />
       <workItem from="1700283328269" duration="436000" />
       <workItem from="1700284355118" duration="2332000" />
-      <workItem from="1700298004800" duration="32000" />
+      <workItem from="1700298004800" duration="54000" />
+      <workItem from="1700372883613" duration="30000" />
+      <workItem from="1701339203702" duration="1000" />
+      <workItem from="1701588125398" duration="57000" />
+      <workItem from="1701681826135" duration="20000" />
+      <workItem from="1701763768261" duration="360000" />
     </task>
     <task id="LOCAL−00001" summary="first version">
       <created>1694841877942</created>
@@ -370,7 +373,19 @@
       <option name="presentableId" value="LOCAL−00045" />
       <updated>1700288381994</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL−00046" summary="checkbox and radio updated">
+      <created>1700298042950</created>
+      <option name="number" value="LOCAL−00046" />
+      <option name="presentableId" value="LOCAL−00046" />
+      <updated>1700298042950</updated>
+    </task>
+    <task id="LOCAL−00047" summary="checkbox and radio updated">
+      <created>1700298049014</created>
+      <option name="number" value="LOCAL−00047" />
+      <option name="presentableId" value="LOCAL−00047" />
+      <updated>1700298049014</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
