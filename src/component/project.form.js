@@ -384,6 +384,8 @@ const ProjectForm = CreateReactClass({
   },
 
   InputPopup(props) {
+
+    props = Object.assign({}, props);
     let onChange = props.onChange;
     props.value = this.getValue(props);
     this.setValue(props.name, props.value);
@@ -530,6 +532,8 @@ const ProjectForm = CreateReactClass({
   },
 
   TextAreaPopup(props) {
+
+    props = Object.assign({}, props);
     let onChange = props.onChange;
     props.value = this.getValue(props);
     this.setValue(props.name, props.value);
