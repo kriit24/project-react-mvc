@@ -99,10 +99,14 @@ class ProjectReact extends React.Component {
         : { ...this.props, ...action.props };
     let method =
       component.props.method !== undefined ? component.props.method : 'Index';
-    let content = action[method].apply(action, [component.props]);
-    if (content !== undefined) {
-      this.component(content);
-    }
+
+    setTimeout(() => {
+
+      let content = action[method].apply(action, [component.props]);
+      if (content !== undefined) {
+        this.component(content);
+      }
+    }, 100);
   }
 
   render() {
