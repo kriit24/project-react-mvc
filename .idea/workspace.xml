@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="textarea popup fix">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,13 +101,8 @@
       <workItem from="1701588125398" duration="57000" />
       <workItem from="1701681826135" duration="20000" />
       <workItem from="1701763768261" duration="461000" />
-      <workItem from="1701867420665" duration="64000" />
-    </task>
-    <task id="LOCAL−00001" summary="first version">
-      <created>1694841877942</created>
-      <option name="number" value="LOCAL−00001" />
-      <option name="presentableId" value="LOCAL−00001" />
-      <updated>1694841877942</updated>
+      <workItem from="1701867420665" duration="164000" />
+      <workItem from="1702100156032" duration="20000" />
     </task>
     <task id="LOCAL−00002" summary="first version">
       <created>1694842553557</created>
@@ -396,7 +392,13 @@
       <option name="presentableId" value="LOCAL−00049" />
       <updated>1701867481259</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL−00050" summary="textarea popup fix">
+      <created>1701867528198</created>
+      <option name="number" value="LOCAL−00050" />
+      <option name="presentableId" value="LOCAL−00050" />
+      <updated>1701867528198</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

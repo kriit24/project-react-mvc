@@ -894,20 +894,35 @@ const ProjectForm = CreateReactClass({
             result.assets[0].uri.lastIndexOf('/') + 1,
             result.assets[0].uri.length
           );
-          value.push({ fileName: filename, image: result.assets[0].base64 });
-          this.setValue(props.name, value, true);
-          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded ('+value.length+'pc)');
+          let file_type = result.assets[0].type;
+          if( file_type == 'image' ) {
+
+            value.push({fileName: filename, image: result.assets[0].base64});
+            this.setValue(props.name, value, true);
+            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded (' + value.length + 'pc)');
+          }
+          else{
+
+            alert('This is not a image');
+          }
         } else {
           let filename = result.assets[0].uri.substring(
             result.assets[0].uri.lastIndexOf('/') + 1,
             result.assets[0].uri.length
           );
-          this.setValue(
-            props.name,
-            [{ fileName: filename, image: result.assets[0].base64 }],
-            true
-          );
-          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded ('+value.length+'pc)');
+          let file_type = result.assets[0].type;
+          if( file_type == 'image' ) {
+            this.setValue(
+              props.name,
+              [{ fileName: filename, image: result.assets[0].base64 }],
+              true
+            );
+            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded ('+value.length+'pc)');
+          }
+          else{
+
+            alert('This is not a image');
+          }
         }
         promiseResolve();
       } else {
