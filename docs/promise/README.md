@@ -24,15 +24,17 @@ promise.push((resolve, reject, args, client_company) => {
 }, {'add additional args'});
 
 promise.init(
-/*success*/(client_company, order) => {
+    //success
+    (client_company, order) => {
 
-    this.view(
-        <ClientView {...props} client_company={client_company} order={order}/>
-    );
-},
-/*failed*/(error) => {
-
-   console.log(error);
-}
+        this.view(
+            <ClientView {...props} client_company={client_company} order={order}/>
+        );
+    },
+    //failed
+    (error) => {
+    
+       console.log(error);
+    }
 );
 ```
