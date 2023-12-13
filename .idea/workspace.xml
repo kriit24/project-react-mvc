@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="allow gallery upload only images">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="add timeout to action, so loader can be shown">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,23 +29,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/src/component/form&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/docs/promise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\docs\promise" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\component\form" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\component" />
@@ -104,13 +105,9 @@
       <workItem from="1701763768261" duration="461000" />
       <workItem from="1701867420665" duration="164000" />
       <workItem from="1702100156032" duration="89000" />
-      <workItem from="1702101628931" duration="25000" />
-    </task>
-    <task id="LOCAL−00003" summary="first version">
-      <created>1694842572780</created>
-      <option name="number" value="LOCAL−00003" />
-      <option name="presentableId" value="LOCAL−00003" />
-      <updated>1694842572780</updated>
+      <workItem from="1702101628931" duration="107000" />
+      <workItem from="1702383931428" duration="34000" />
+      <workItem from="1702456171831" duration="200000" />
     </task>
     <task id="LOCAL−00004" summary="first version">
       <created>1694936255524</created>
@@ -400,7 +397,13 @@
       <option name="presentableId" value="LOCAL−00051" />
       <updated>1702100206813</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL−00052" summary="add timeout to action, so loader can be shown">
+      <created>1702101704802</created>
+      <option name="number" value="LOCAL−00052" />
+      <option name="presentableId" value="LOCAL−00052" />
+      <updated>1702101704802</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Controller  method accepts input &quot;props&quot;" />
     <MESSAGE value="promise methods added" />
     <MESSAGE value="promise methods update" />
     <MESSAGE value="throw errors only on development mode" />
@@ -443,6 +445,7 @@
     <MESSAGE value="form radio fix" />
     <MESSAGE value="textarea popup fix" />
     <MESSAGE value="allow gallery upload only images" />
-    <option name="LAST_COMMIT_MESSAGE" value="allow gallery upload only images" />
+    <MESSAGE value="add timeout to action, so loader can be shown" />
+    <option name="LAST_COMMIT_MESSAGE" value="add timeout to action, so loader can be shown" />
   </component>
 </project>

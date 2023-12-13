@@ -803,11 +803,7 @@ const ProjectForm = CreateReactClass({
 
     let value = this.getValue(props, false);
     this.setValue(props.name, props.checked ? props.value : null);
-    let propsStyle = props.style !== undefined ? props.style : {};
-    let style = {
-      ...css.form_control,
-      ...propsStyle
-    };
+    let style = props.style !== undefined ? props.style : {};
 
     let onDataChange = (value) => {
 
@@ -833,7 +829,7 @@ const ProjectForm = CreateReactClass({
       </View>;
     }
 
-    return <View style={[{flexDirection: 'column', width: '100%'}, style]}>
+    return <View style={[{flexDirection: 'column', width: '100%'}, css.form_control, style]}>
       <Radio
           style={[css.form_control, {padding: 15}]}
           disabled={props.disabled !== undefined ? props.disabled: false}

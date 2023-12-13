@@ -10,4 +10,5 @@ npm i project-react-mvc
 
 [Controller](https://github.com/kriit24/project-react-mvc/tree/master/docs/controller)  
 [Form](https://github.com/kriit24/project-react-mvc/tree/master/docs/form)  
-[Popup](https://github.com/kriit24/project-react-mvc/tree/master/docs/popup)
+[Popup](https://github.com/kriit24/project-react-mvc/tree/master/docs/popup)  
+[Promise](https://github.com/kriit24/project-react-mvc/tree/master/docs/promise)
