@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="add timeout to action, so loader can be shown">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="docs updated">
+      <change beforePath="$PROJECT_DIR$/docs/promise/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/promise/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,13 +105,7 @@
       <workItem from="1702100156032" duration="89000" />
       <workItem from="1702101628931" duration="107000" />
       <workItem from="1702383931428" duration="34000" />
-      <workItem from="1702456171831" duration="200000" />
-    </task>
-    <task id="LOCAL−00004" summary="first version">
-      <created>1694936255524</created>
-      <option name="number" value="LOCAL−00004" />
-      <option name="presentableId" value="LOCAL−00004" />
-      <updated>1694936255524</updated>
+      <workItem from="1702456171831" duration="870000" />
     </task>
     <task id="LOCAL−00005" summary="first version">
       <created>1694936264018</created>
@@ -403,7 +395,13 @@
       <option name="presentableId" value="LOCAL−00052" />
       <updated>1702101704802</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL−00053" summary="docs updated">
+      <created>1702456405423</created>
+      <option name="number" value="LOCAL−00053" />
+      <option name="presentableId" value="LOCAL−00053" />
+      <updated>1702456405424</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +419,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="promise methods added" />
     <MESSAGE value="promise methods update" />
     <MESSAGE value="throw errors only on development mode" />
     <MESSAGE value="dynamic select button text and close button text" />
@@ -446,6 +443,7 @@
     <MESSAGE value="textarea popup fix" />
     <MESSAGE value="allow gallery upload only images" />
     <MESSAGE value="add timeout to action, so loader can be shown" />
-    <option name="LAST_COMMIT_MESSAGE" value="add timeout to action, so loader can be shown" />
+    <MESSAGE value="docs updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs updated" />
   </component>
 </project>

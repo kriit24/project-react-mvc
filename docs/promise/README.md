@@ -23,10 +23,16 @@ promise.push((resolve, reject, args, client_company) => {
         .fetch(resolve);
 }, {'add additional args'});
 
-promise.init((client_company, order) => {
+promise.init(
+/*success*/(client_company, order) => {
 
     this.view(
         <ClientView {...props} client_company={client_company} order={order}/>
     );
-});
+},
+/*failed*/(error) => {
+
+   console.log(error);
+}
+);
 ```
