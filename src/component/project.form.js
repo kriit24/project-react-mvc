@@ -23,6 +23,7 @@ import {
 import {
   ResetInputDefaults,
   FormInput,
+  DblClickInput,
   InputPopupBtn,
   InputPopupRightBtn,
 } from './form/input';
@@ -54,20 +55,20 @@ const ProjectForm = CreateReactClass({
 
     this.setData(props.data);
     if (props.children !== undefined) {
-        let headerHeight = props.headerHeight !== undefined ? props.headerHeight : 75;
+      let headerHeight = props.headerHeight !== undefined ? props.headerHeight : 75;
       let behavior = props.behavior !== undefined && props.behavior ? (typeof props.behavior == 'boolean' ? (Platform.OS === "ios" ? "padding" : "height") : props.behavior) : null;
       return (
-        <KeyboardAvoidingView
-            behavior={behavior}
-            keyboardVerticalOffset={headerHeight}
-            style={
-              props.style !== undefined
-                  ? [{ width: '100%', minWidth: '100%' }, props.style]
-                  : { width: '100%', minWidth: '100%' }
-            }
-        >
-          {props.children}
-        </KeyboardAvoidingView>
+          <KeyboardAvoidingView
+              behavior={behavior}
+              keyboardVerticalOffset={headerHeight}
+              style={
+                props.style !== undefined
+                    ? [{ width: '100%', minWidth: '100%' }, props.style]
+                    : { width: '100%', minWidth: '100%' }
+              }
+          >
+            {props.children}
+          </KeyboardAvoidingView>
       );
     }
   },
@@ -78,13 +79,13 @@ const ProjectForm = CreateReactClass({
 
     //assume that json
     canJSON(
-      data,
-      (data) => {
-        this.data = data;
-      },
-      (data) => {
-        this.data = data;
-      }
+        data,
+        (data) => {
+          this.data = data;
+        },
+        (data) => {
+          this.data = data;
+        }
     );
   },
 
@@ -96,7 +97,7 @@ const ProjectForm = CreateReactClass({
 
   getValue(props, defaultOnUndefined = null) {
     let value =
-      this.data[props.name] !== undefined ? this.data[props.name] : null;
+        this.data[props.name] !== undefined ? this.data[props.name] : null;
     value = props.value !== undefined ? props.value : value;
     return value === undefined ? defaultOnUndefined : value;
   },
@@ -105,8 +106,8 @@ const ProjectForm = CreateReactClass({
 
     let mergeData = () => {
       let formData = Object.assign(
-        Object.create(Object.getPrototypeOf(this.formData)),
-        this.formData
+          Object.create(Object.getPrototypeOf(this.formData)),
+          this.formData
       );
       let ret = {};
 
@@ -125,13 +126,13 @@ const ProjectForm = CreateReactClass({
       const valueToObjectData = (obj, nameParts, i, value) => {
         let name = nameParts[i];
         obj[name.replace(']', '')] =
-          nameParts[i + 1] === undefined ? value : {};
+            nameParts[i + 1] === undefined ? value : {};
         if (nameParts[i + 1] !== undefined) {
           obj[name.replace(']', '')] = valueToObjectData(
-            obj[name.replace(']', '')],
-            nameParts,
-            i + 1,
-            value
+              obj[name.replace(']', '')],
+              nameParts,
+              i + 1,
+              value
           );
         }
         return obj;
@@ -180,9 +181,9 @@ const ProjectForm = CreateReactClass({
   getNumberOfLines(attr) {
     if (attr.numberOfLines) {
       attr.minHeight =
-        Platform.OS === 'ios' && attr.numberOfLines
-          ? 20 * attr.numberOfLines
-          : null;
+          Platform.OS === 'ios' && attr.numberOfLines
+              ? 20 * attr.numberOfLines
+              : null;
       attr.numberOfLines = Platform.OS === 'ios' ? null : attr.numberOfLines;
     }
     return attr;
@@ -203,12 +204,12 @@ const ProjectForm = CreateReactClass({
     const flatListRef = React.useRef();
 
     return (
-      <FlatList
-          ref={props._ref !== undefined ? props._ref : flatListRef}
-        ListEmptyComponent={<>{props.children}</>}
-        data={null}
-        renderItem={null}
-      />
+        <FlatList
+            ref={props._ref !== undefined ? props._ref : flatListRef}
+            ListEmptyComponent={<>{props.children}</>}
+            data={null}
+            renderItem={null}
+        />
     );
   },
 
@@ -227,9 +228,9 @@ const ProjectForm = CreateReactClass({
     };
 
     return (
-      <View style={[css.content, css.content_fit_to_text, layer]}>
-        <Text style={style}>{props.value}</Text>
-      </View>
+        <View style={[css.content, css.content_fit_to_text, layer]}>
+          <Text style={style}>{props.value}</Text>
+        </View>
     );
   },
 
@@ -310,20 +311,20 @@ const ProjectForm = CreateReactClass({
 
     if (type === 'hidden') {
       return (
-        <View style={css.hidden}>
-          <TextInput
-            key={unique_id(5)}
-            style={css.hidden}
-            autoFocus={false}
-            multiline={false}
-            onFocus={Keyboard.dismiss}
-            value={this.setValue(
-              props.name,
-              value ? value.toString() : value,
-              true
-            )}
-          />
-        </View>
+          <View style={css.hidden}>
+            <TextInput
+                key={unique_id(5)}
+                style={css.hidden}
+                autoFocus={false}
+                multiline={false}
+                onFocus={Keyboard.dismiss}
+                value={this.setValue(
+                    props.name,
+                    value ? value.toString() : value,
+                    true
+                )}
+            />
+          </View>
       );
     }
 
@@ -333,53 +334,53 @@ const ProjectForm = CreateReactClass({
 
     if (type === 'password') {
       return (
-        <View style={style}>
-          <TextInput
-            key={unique_id(5)}
-            secureTextEntry={true}
-            textContentType="oneTimeCode"
-            onChangeText={(val) => {
-              this.setValue(props.name, val, true);
-            }}
-            value={null}
-            defaultValue={this.setValue(props.name, null)}
-            {...attr}
-          />
-        </View>
+          <View style={style}>
+            <DblClickInput
+                key={unique_id(5)}
+                secureTextEntry={true}
+                textContentType="oneTimeCode"
+                onChangeText={(val) => {
+                  this.setValue(props.name, val, true);
+                }}
+                value={null}
+                defaultValue={this.setValue(props.name, null)}
+                {...attr}
+            />
+          </View>
       );
     }
 
     if (props.readonly !== undefined && props.readonly) {
       return (
-        <View style={style} pointerEvents="none">
-          <TextInput
-            key={unique_id(5)}
-            onChangeText={(val) => {
-              this.setValue(props.name, val, true);
-            }}
-            value={null}
-            defaultValue={this.setValue(props.name, value)}
-            placeholder={props.placeholder}
-            editable={false}
-            {...attr}
-          />
-        </View>
+          <View style={style} pointerEvents="none">
+            <TextInput
+                key={unique_id(5)}
+                onChangeText={(val) => {
+                  this.setValue(props.name, val, true);
+                }}
+                value={null}
+                defaultValue={this.setValue(props.name, value)}
+                placeholder={props.placeholder}
+                editable={false}
+                {...attr}
+            />
+          </View>
       );
     }
 
     return (
-      <View style={style}>
-        <TextInput
-          key={unique_id(5)}
-          onChangeText={(val) => {
-            this.setValue(props.name, val, true);
-          }}
-          value={null}
-          defaultValue={this.setValue(props.name, value)}
-          placeholder={props.placeholder}
-          {...attr}
-        />
-      </View>
+        <View style={style}>
+          <DblClickInput
+              key={unique_id(5)}
+              onChangeText={(val) => {
+                this.setValue(props.name, val, true);
+              }}
+              value={null}
+              defaultValue={this.setValue(props.name, value)}
+              placeholder={props.placeholder}
+              {...attr}
+          />
+        </View>
     );
   },
 
@@ -449,46 +450,46 @@ const ProjectForm = CreateReactClass({
       attr = this.getNumberOfLines(attr);
 
       Popup.Alert(
-        <View
-          style={[
-            {
-              alignSelf: 'stretch',
-              width: width - 100,
-              height: 'auto',
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-            },
-          ]}
-        >
           <View
-            style={[
-              {
-                flex: 3,
-              },
-            ]}
+              style={[
+                {
+                  alignSelf: 'stretch',
+                  width: width - 100,
+                  height: 'auto',
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                },
+              ]}
           >
-            <FormInput
-              {...popupProps}
-              setInputPopupValue={setInputPopupValue}
-              attr={attr}
-              parent={this}
-            />
+            <View
+                style={[
+                  {
+                    flex: 3,
+                  },
+                ]}
+            >
+              <FormInput
+                  {...popupProps}
+                  setInputPopupValue={setInputPopupValue}
+                  attr={attr}
+                  parent={this}
+              />
+            </View>
+            <View
+                style={[
+                  {
+                    flex: 1,
+                    alignItems: 'center',
+                    marginLeft: 5,
+                  },
+                ]}
+            >
+              <InputPopupRightBtn
+                  {...props}
+                  setInputPopupValue={setInputPopupValue}
+              />
+            </View>
           </View>
-          <View
-            style={[
-              {
-                flex: 1,
-                alignItems: 'center',
-                marginLeft: 5,
-              },
-            ]}
-          >
-            <InputPopupRightBtn
-              {...props}
-              setInputPopupValue={setInputPopupValue}
-            />
-          </View>
-        </View>
       );
     };
 
@@ -497,10 +498,10 @@ const ProjectForm = CreateReactClass({
     };
 
     return (
-      <>
-        <ResetInputDefaults />
-        <InputPopupBtn {...props} />
-      </>
+        <>
+          <ResetInputDefaults />
+          <InputPopupBtn {...props} />
+        </>
     );
   },
 
@@ -515,19 +516,19 @@ const ProjectForm = CreateReactClass({
     attr = this.getNumberOfLines(attr);
 
     return (
-      <View style={style}>
-        <TextInput
-          key={unique_id(5)}
-          multiline={true}
-          style={{ justifyContent: 'flex-start', textAlignVertical: 'top' }}
-          onChangeText={(val) => {
-            this.setValue(props.name, val, true);
-          }}
-          value={null}
-          defaultValue={this.setValue(props.name, value)}
-          {...attr}
-        />
-      </View>
+        <View style={style}>
+          <DblClickInput
+              key={unique_id(5)}
+              multiline={true}
+              style={{ justifyContent: 'flex-start', textAlignVertical: 'top' }}
+              onChangeText={(val) => {
+                this.setValue(props.name, val, true);
+              }}
+              value={null}
+              defaultValue={this.setValue(props.name, value)}
+              {...attr}
+          />
+        </View>
     );
   },
 
@@ -558,46 +559,46 @@ const ProjectForm = CreateReactClass({
       attr = this.getNumberOfLines(attr);
 
       Popup.Alert(
-        <View
-          style={[
-            {
-              alignSelf: 'stretch',
-              width: width - 100,
-              height: 'auto',
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-            },
-          ]}
-        >
           <View
-            style={[
-              {
-                flex: 3,
-              },
-            ]}
+              style={[
+                {
+                  alignSelf: 'stretch',
+                  width: width - 100,
+                  height: 'auto',
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                },
+              ]}
           >
-            <FormInput
-              {...popupProps}
-              setInputPopupValue={setInputPopupValue}
-              attr={attr}
-              parent={this}
-            />
+            <View
+                style={[
+                  {
+                    flex: 3,
+                  },
+                ]}
+            >
+              <FormInput
+                  {...popupProps}
+                  setInputPopupValue={setInputPopupValue}
+                  attr={attr}
+                  parent={this}
+              />
+            </View>
+            <View
+                style={[
+                  {
+                    flex: 1,
+                    alignItems: 'center',
+                    marginLeft: 5,
+                  },
+                ]}
+            >
+              <InputPopupRightBtn
+                  {...props}
+                  setInputPopupValue={setInputPopupValue}
+              />
+            </View>
           </View>
-          <View
-            style={[
-              {
-                flex: 1,
-                alignItems: 'center',
-                marginLeft: 5,
-              },
-            ]}
-          >
-            <InputPopupRightBtn
-              {...props}
-              setInputPopupValue={setInputPopupValue}
-            />
-          </View>
-        </View>
       );
     };
 
@@ -606,10 +607,10 @@ const ProjectForm = CreateReactClass({
     };
 
     return (
-      <>
-        <ResetInputDefaults />
-        <InputPopupBtn {...props} />
-      </>
+        <>
+          <ResetInputDefaults />
+          <InputPopupBtn {...props} />
+        </>
     );
   },
 
@@ -634,40 +635,40 @@ const ProjectForm = CreateReactClass({
     };
 
     style =
-      Object.keys(style).length > 0
-        ? style
-        : { height: '100%', margin: 0, padding: 0 };
+        Object.keys(style).length > 0
+            ? style
+            : { height: '100%', margin: 0, padding: 0 };
 
     let width = Dimensions.get('window').width; //full width
     let popup = ({ setSelectedBtnValue }) => {
       Popup.Alert(
-        <View style={[{ alignSelf: 'stretch', width: width - 150 }]}>
-          <SelectSingle
-            name={props.name}
-            style={style}
-            items={optionsList}
-            selectedValue={selectedValue}
-            setSelectedValue={onDataChange}
-            setSelectedBtnValue={setSelectedBtnValue}
-            useSearch={true}
-            selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
-            closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
-            searchText={props.searchText !== undefined ? props.searchText : 'Search'}
-          />
-        </View>
+          <View style={[{ alignSelf: 'stretch', width: width - 150 }]}>
+            <SelectSingle
+                name={props.name}
+                style={style}
+                items={optionsList}
+                selectedValue={selectedValue}
+                setSelectedValue={onDataChange}
+                setSelectedBtnValue={setSelectedBtnValue}
+                useSearch={true}
+                selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
+                closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
+                searchText={props.searchText !== undefined ? props.searchText : 'Search'}
+            />
+          </View>
       );
     };
 
     return (
-      <>
-        <ResetSelectDefaults />
-        <SelectPopupBtn
-          popup={popup}
-          selectedValue={selectedValue}
-          items={optionsList}
-          selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
-        />
-      </>
+        <>
+          <ResetSelectDefaults />
+          <SelectPopupBtn
+              popup={popup}
+              selectedValue={selectedValue}
+              items={optionsList}
+              selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
+          />
+        </>
     );
   },
 
@@ -676,8 +677,8 @@ const ProjectForm = CreateReactClass({
     let onChange = props.onChange;
     let selectedValue = this.getValue(props);
     selectedValue = Array.isArray(selectedValue)
-      ? selectedValue
-      : [selectedValue];
+        ? selectedValue
+        : [selectedValue];
     let style = props.style !== undefined ? props.style : {};
     this.setValue(props.name, selectedValue);
     this.onChangeEvents[props.name] = onChange;
@@ -690,40 +691,40 @@ const ProjectForm = CreateReactClass({
     };
 
     style =
-      Object.keys(style).length > 0
-        ? style
-        : { height: '100%', margin: 0, padding: 0 };
+        Object.keys(style).length > 0
+            ? style
+            : { height: '100%', margin: 0, padding: 0 };
 
     let width = Dimensions.get('window').width; //full width
     let popup = ({ setSelectedBtnValue }) => {
       Popup.Alert(
-        <View style={[{ alignSelf: 'stretch', width: width - 150 }]}>
-          <SelectMulti
-            name={props.name}
-            style={style}
-            items={optionsList}
-            selectedValue={selectedValue}
-            setSelectedValue={onDataChange}
-            setSelectedBtnValue={setSelectedBtnValue}
-            useSearch={true}
-            selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
-            closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
-            searchText={props.searchText !== undefined ? props.searchText : 'Search'}
-          />
-        </View>
+          <View style={[{ alignSelf: 'stretch', width: width - 150 }]}>
+            <SelectMulti
+                name={props.name}
+                style={style}
+                items={optionsList}
+                selectedValue={selectedValue}
+                setSelectedValue={onDataChange}
+                setSelectedBtnValue={setSelectedBtnValue}
+                useSearch={true}
+                selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
+                closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
+                searchText={props.searchText !== undefined ? props.searchText : 'Search'}
+            />
+          </View>
       );
     };
 
     return (
-      <>
-        <ResetSelectDefaults />
-        <SelectPopupBtn
-          popup={popup}
-          selectedValue={selectedValue}
-          items={optionsList}
-          selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
-        />
-      </>
+        <>
+          <ResetSelectDefaults />
+          <SelectPopupBtn
+              popup={popup}
+              selectedValue={selectedValue}
+              items={optionsList}
+              selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
+          />
+        </>
     );
   },
 
@@ -745,21 +746,21 @@ const ProjectForm = CreateReactClass({
     };
 
     return (
-      <FormSwitch
-        value={value}
-        onChange={onDataChange}
-        text={props.text}
-        attr={attr}
-        style={style}
-        float={props.float}
-      />
+        <FormSwitch
+            value={value}
+            onChange={onDataChange}
+            text={props.text}
+            attr={attr}
+            style={style}
+            float={props.float}
+        />
     );
   },
 
 
   CheckBox(props){
 
-      let value = this.getValue(props, false);
+    let value = this.getValue(props, false);
     this.setValue(props.name, props.checked ? props.value : null);
     let propsStyle = props.style !== undefined ? props.style : {};
     let style = {
@@ -776,24 +777,24 @@ const ProjectForm = CreateReactClass({
     if(props.text !== undefined){
 
       return <View style={[css.form_control, style]}>
-      <CheckBox
-          style={{flexDirection: 'row', width: '100%', padding: 15}}
+        <CheckBox
+            style={{flexDirection: 'row', width: '100%', padding: 15}}
             disabled={props.disabled !== undefined ? props.disabled : false}
             value={value}
             onDataChange={onDataChange}
         >
-        <View style={{justifyContent: 'center',marginLeft: 10, paddingRight: 15}}>
-          <Text style={{color: props.disabled ? 'grey' : 'black'}}>{props.text}</Text>
-        </View>
-      </CheckBox>
+          <View style={{justifyContent: 'center',marginLeft: 10, paddingRight: 15}}>
+            <Text style={{color: props.disabled ? 'grey' : 'black'}}>{props.text}</Text>
+          </View>
+        </CheckBox>
       </View>;
     }
 
     return <View style={[{flexDirection: 'column', width: '100%'}, style]}>
       <CheckBox
           style={[css.form_control, {padding: 15}]}
-        disabled={props.disabled !== undefined ? props.disabled: false}
-        value={value}
+          disabled={props.disabled !== undefined ? props.disabled: false}
+          value={value}
           onDataChange={onDataChange}
       />
     </View>;
@@ -823,8 +824,8 @@ const ProjectForm = CreateReactClass({
             onDataChange={onDataChange}
         >
           <View style={{justifyContent: 'center',marginLeft: 10, paddingRight: 15}}>
-          <Text style={{color: props.disabled ? 'grey' : 'black'}}>{props.text}</Text>
-        </View>
+            <Text style={{color: props.disabled ? 'grey' : 'black'}}>{props.text}</Text>
+          </View>
         </Radio>
       </View>;
     }
@@ -855,13 +856,13 @@ const ProjectForm = CreateReactClass({
 
       let promiseResolve = null;
       this.onDataReady.push(
-        new Promise((resolve, reject) => {
-          promiseResolve = resolve;
-        })
+          new Promise((resolve, reject) => {
+            promiseResolve = resolve;
+          })
       );
 
       let requestPermission =
-        await ImagePicker.requestMediaLibraryPermissionsAsync();
+          await ImagePicker.requestMediaLibraryPermissionsAsync();
 
       if (requestPermission.granted === false) {
         alert('Permission to access image roll is required!');
@@ -882,13 +883,13 @@ const ProjectForm = CreateReactClass({
 
         if (props.multiple) {
           let value =
-            this.formData[props.name] !== undefined &&
-            this.formData[props.name] !== null
-              ? this.formData[props.name]
-              : [];
+              this.formData[props.name] !== undefined &&
+              this.formData[props.name] !== null
+                  ? this.formData[props.name]
+                  : [];
           let filename = result.assets[0].uri.substring(
-            result.assets[0].uri.lastIndexOf('/') + 1,
-            result.assets[0].uri.length
+              result.assets[0].uri.lastIndexOf('/') + 1,
+              result.assets[0].uri.length
           );
           let file_type = result.assets[0].type;
           if( file_type == 'image' ) {
@@ -903,15 +904,15 @@ const ProjectForm = CreateReactClass({
           }
         } else {
           let filename = result.assets[0].uri.substring(
-            result.assets[0].uri.lastIndexOf('/') + 1,
-            result.assets[0].uri.length
+              result.assets[0].uri.lastIndexOf('/') + 1,
+              result.assets[0].uri.length
           );
           let file_type = result.assets[0].type;
           if( file_type == 'image' ) {
             this.setValue(
-              props.name,
-              [{ fileName: filename, image: result.assets[0].base64 }],
-              true
+                props.name,
+                [{ fileName: filename, image: result.assets[0].base64 }],
+                true
             );
             setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded ('+value.length+'pc)');
           }
@@ -930,24 +931,24 @@ const ProjectForm = CreateReactClass({
 
     let onDelete = async (elemName, imageName, setPicture) => {
 
-        let value = this.formData[elemName] !== undefined && this.formData[elemName] !== null ? this.formData[elemName] : [];
+      let value = this.formData[elemName] !== undefined && this.formData[elemName] !== null ? this.formData[elemName] : [];
       if( value.length ){
 
-          let tmp = [];
-          let c = value.length;
-          for(let i = 0; i < c; i++){
+        let tmp = [];
+        let c = value.length;
+        for(let i = 0; i < c; i++){
 
-              let row = value[i];
-              if( row.fileName != imageName )
-                  tmp.push(row);
-          }
-          this.setValue(elemName, tmp, true);
-          tmp = [];
+          let row = value[i];
+          if( row.fileName != imageName )
+            tmp.push(row);
+        }
+        this.setValue(elemName, tmp, true);
+        tmp = [];
 
-          if( this.formData[elemName].length )
-            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : 'Picture loaded ('+this.formData[elemName].length+'pc)');
-          else
-            setPicture(props.placeholder);
+        if( this.formData[elemName].length )
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : 'Picture loaded ('+this.formData[elemName].length+'pc)');
+        else
+          setPicture(props.placeholder);
       }
     };
 
@@ -955,13 +956,13 @@ const ProjectForm = CreateReactClass({
     this.onChangeEvents[props.name] = onChange;
 
     return (
-      <CameraBtn
-          {...props}
-        style={style}
-        onPress={onPress}
-        onDelete={onDelete}
-        parent={this}
-      />
+        <CameraBtn
+            {...props}
+            style={style}
+            onPress={onPress}
+            onDelete={onDelete}
+            parent={this}
+        />
     );
   },
 
@@ -979,9 +980,9 @@ const ProjectForm = CreateReactClass({
 
       let promiseResolve = null;
       this.onDataReady.push(
-        new Promise((resolve, reject) => {
-          promiseResolve = resolve;
-        })
+          new Promise((resolve, reject) => {
+            promiseResolve = resolve;
+          })
       );
 
       let requestPermission = await ImagePicker.requestCameraPermissionsAsync();
@@ -1004,24 +1005,24 @@ const ProjectForm = CreateReactClass({
 
       if (!result.canceled) {
         let filename = result.assets[0].uri.substring(
-          result.assets[0].uri.lastIndexOf('/') + 1,
-          result.assets[0].uri.length
+            result.assets[0].uri.lastIndexOf('/') + 1,
+            result.assets[0].uri.length
         );
 
         if (props.multiple) {
           let value =
-            this.formData[props.name] !== undefined &&
-            this.formData[props.name] !== null
-              ? this.formData[props.name]
-              : [];
+              this.formData[props.name] !== undefined &&
+              this.formData[props.name] !== null
+                  ? this.formData[props.name]
+                  : [];
           value.push({ fileName: filename, image: result.assets[0].base64 });
           this.setValue(props.name, value, true);
           setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded ('+value.length+'pc)');
         } else {
           this.setValue(
-            props.name,
-            [{ fileName: filename, image: result.assets[0].base64 }],
-            true
+              props.name,
+              [{ fileName: filename, image: result.assets[0].base64 }],
+              true
           );
           setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded');
         }
@@ -1084,30 +1085,30 @@ const ProjectForm = CreateReactClass({
       }
       this.submitName = props.name;
       this.setValue(
-        props.name === undefined ? 'undefined' : props.name,
-        props.value,
-        false
+          props.name === undefined ? 'undefined' : props.name,
+          props.value,
+          false
       );
       onPress();
     };
 
     return (
-      <TouchableOpacity
-        key={unique_id(5)}
-        style={style}
-        onPress={submitFn}
-        {...attr}
-      >
-        <Text style={btn_txt}>{props.value}</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+            key={unique_id(5)}
+            style={style}
+            onPress={submitFn}
+            {...attr}
+        >
+          <Text style={btn_txt}>{props.value}</Text>
+        </TouchableOpacity>
     );
   },
 
   Group(props) {
     return (
-      <View style={[css.form_control, { flex: 1, flexDirection: 'row' }]}>
-        {props.children}
-      </View>
+        <View style={[css.form_control, { flex: 1, flexDirection: 'row' }]}>
+          {props.children}
+        </View>
     );
   },
 
