@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="docs updated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/form/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="form input and text elem double click select all added">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +109,7 @@
       <workItem from="1703050649958" duration="110000" />
       <workItem from="1704525508120" duration="36000" />
       <workItem from="1704787591553" duration="127000" />
+      <workItem from="1704787725631" duration="39000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -406,7 +405,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="promise methods update" />
     <MESSAGE value="throw errors only on development mode" />
     <MESSAGE value="dynamic select button text and close button text" />
     <MESSAGE value="array list to option list conversion fix" />
@@ -449,6 +447,7 @@
     <MESSAGE value="allow gallery upload only images" />
     <MESSAGE value="add timeout to action, so loader can be shown" />
     <MESSAGE value="docs updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs updated" />
+    <MESSAGE value="form input and text elem double click select all added" />
+    <option name="LAST_COMMIT_MESSAGE" value="form input and text elem double click select all added" />
   </component>
 </project>
