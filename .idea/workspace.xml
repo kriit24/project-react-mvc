@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="method action added to props, now can be called: props.action()">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.react.js" afterDir="false" />
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="props.action() fix inside action">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,7 @@
       <workItem from="1704787591553" duration="127000" />
       <workItem from="1704787725631" duration="704000" />
       <workItem from="1705035535065" duration="1163000" />
-      <workItem from="1705041454754" duration="27000" />
+      <workItem from="1705041454754" duration="68000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -408,7 +407,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dynamic select button text and close button text" />
     <MESSAGE value="array list to option list conversion fix" />
     <MESSAGE value="Form data element added, sequential promise added" />
     <MESSAGE value="Form data validation added" />
@@ -451,6 +449,7 @@
     <MESSAGE value="docs updated" />
     <MESSAGE value="form input and text elem double click select all added" />
     <MESSAGE value="method action added to props, now can be called: props.action()" />
-    <option name="LAST_COMMIT_MESSAGE" value="method action added to props, now can be called: props.action()" />
+    <MESSAGE value="props.action() fix inside action" />
+    <option name="LAST_COMMIT_MESSAGE" value="props.action() fix inside action" />
   </component>
 </project>
