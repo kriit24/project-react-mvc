@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="form input and text elem double click select all added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.react.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,8 @@
       <workItem from="1703050649958" duration="110000" />
       <workItem from="1704525508120" duration="36000" />
       <workItem from="1704787591553" duration="127000" />
-      <workItem from="1704787725631" duration="39000" />
+      <workItem from="1704787725631" duration="704000" />
+      <workItem from="1705035535065" duration="491000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -405,7 +408,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

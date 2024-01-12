@@ -25,7 +25,8 @@ class ProjectReact extends React.Component {
           'Method "' + method + '" not found @ "' + this.constructor.name + '"'
         );
       } else {
-        this[method].apply(this, [props]);
+        const merge = this.componentProps();
+        this[method].apply(this, [{...props, ...merge}]);
       }
     }
   }
@@ -53,6 +54,11 @@ class ProjectReact extends React.Component {
     }
   }
 
+  componentProps(){
+
+    return {action: this.action};
+  }
+
   call(content, reject) {
     if (typeof content === 'function') {
       if (this._isMounted && this._willUnmount === false) content();
@@ -66,7 +72,8 @@ class ProjectReact extends React.Component {
       this.component(content);
     }
     else {
-      let params = Object.assign({}, content.props);
+      const merge = this.componentProps();
+      let params = Object.assign({}, [{...content.props, ...merge}]);
       let fn = content.type;
       fn.apply(null, [params]);
     }
@@ -102,7 +109,8 @@ class ProjectReact extends React.Component {
 
     setTimeout(() => {
 
-      let content = action[method].apply(action, [component.props]);
+      const merge = this.componentProps();
+      let content = action[method].apply(action, [{...component.props, ...merge}]);
       if (content !== undefined) {
         this.component(content);
       }
