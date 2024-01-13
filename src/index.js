@@ -4,6 +4,7 @@ import ProjectValidate from './component/project.validate';
 import Popup from './helper/popup';
 import Loader from './helper/loader';
 import ProjectPromise from "./component/project.promise";
+import ProjectCallback from "./component/project.callback";
 
 const Project = {
     React: ProjectReact,
@@ -11,6 +12,7 @@ const Project = {
     Validate: ProjectValidate,
     Popup: Popup,
     Promise: ProjectPromise,
+    Callback: ProjectCallback,
 };
 
 const App = ProjectApp;

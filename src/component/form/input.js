@@ -26,14 +26,11 @@ function FormInput(props) {
             props.value !== undefined && props.value ? props.value : '';
 
     let selectionLength =
-        globalValue[props.name] !== null ? globalValue[props.name].length : 0;
+        globalValue[props.name] !== null ? globalValue[props.name].length : props.value.length;
 
     setTimeout(() => {
         if (globalInputRef && !globalInputRef.isFocused()) {
             globalInputRef.focus();
-            globalInputRef.setNativeProps({
-                selection: {start: selectionLength, end: selectionLength},
-            });
         }
     }, 150);
 
@@ -48,6 +45,7 @@ function FormInput(props) {
             }}
             value={null}
             defaultValue={globalValue[props.name]}
+            selection={{start: selectionLength, end: selectionLength}}
             innerRef={(ref) => {
                 if (ref) {
                     globalInputRef = Object.assign(ref, {props: props});
@@ -63,9 +61,10 @@ let editableTimeout = null;
 
 function DblClickInput(props) {
 
+    let startSelection = (props.selection !== undefined ? props.selection : {'start': 0, 'end': 0});
     const [editable, setEditable] = useState(false);
     const [editableText, setEditableText] = useState(props.defaultValue !== null ? props.defaultValue : "");
-    const [selection, setSelection] = useState({'start': 0, 'end': 0});
+    const [selection, setSelection] = useState(startSelection);
 
     return <TextInput
         {...props}
@@ -74,7 +73,7 @@ function DblClickInput(props) {
         ref={props.innerRef !== undefined ? props.innerRef : null}
         onChangeText={(text) => {
 
-            setSelection({'start': 0, 'end': 0});
+            setSelection(startSelection);
             setEditableText(text);
             if( props.onChangeText ) props.onChangeText(text);
         }}
@@ -88,7 +87,7 @@ function DblClickInput(props) {
                 setEditable(false);
             } else {
 
-                setSelection({'start': 0, 'end': 0});
+                setSelection(startSelection);
                 setEditable(true);
                 editableTimeout = setTimeout(() => {
 
