@@ -650,7 +650,7 @@ const ProjectForm = CreateReactClass({
                 selectedValue={selectedValue}
                 setSelectedValue={onDataChange}
                 setSelectedBtnValue={setSelectedBtnValue}
-                useSearch={true}
+                useSearch={props.useSearch !== undefined ? props.useSearch : true}
                 selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
                 closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
                 searchText={props.searchText !== undefined ? props.searchText : 'Search'}
@@ -706,7 +706,7 @@ const ProjectForm = CreateReactClass({
                 selectedValue={selectedValue}
                 setSelectedValue={onDataChange}
                 setSelectedBtnValue={setSelectedBtnValue}
-                useSearch={true}
+                useSearch={props.useSearch !== undefined ? props.useSearch : true}
                 selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
                 closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
                 searchText={props.searchText !== undefined ? props.searchText : 'Search'}

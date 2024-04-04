@@ -18,6 +18,7 @@ const Project = {
 const App = ProjectApp;
 const Form = new ProjectForm();
 const Validate = new Project.Validate();
+const Callback = Project.Callback;
 /*
 let scrollRef = React.useRef();
 <ScrollView _ref={scrollRef}>
@@ -44,4 +45,5 @@ function Bind(props) {
     return Source;
 }
 
-export { Project, ScrollView, Form, Validate, Popup, Loader, App, Bind };
+
+export { Project, ScrollView, Form, Validate, Popup, Loader, App, Bind, Callback };
