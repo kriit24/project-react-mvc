@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="standalone callback added">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="useSearch props added to Select element">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +122,10 @@
       <workItem from="1705556310712" duration="38000" />
       <workItem from="1705565154268" duration="1202000" />
       <workItem from="1705567234907" duration="38000" />
-      <workItem from="1712231441959" duration="389000" />
+      <workItem from="1712231441959" duration="669000" />
+      <workItem from="1712556034852" duration="286000" />
+      <workItem from="1712572233648" duration="5000" />
+      <workItem from="1712572699527" duration="364000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -419,7 +421,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Form data element added, sequential promise added" />
     <MESSAGE value="Form data validation added" />
     <MESSAGE value="Form checkbox added" />
     <MESSAGE value="Form checkbox updated" />
@@ -462,6 +463,7 @@
     <MESSAGE value="method action added to props, now can be called: props.action()" />
     <MESSAGE value="props.action() fix inside action" />
     <MESSAGE value="standalone callback added" />
-    <option name="LAST_COMMIT_MESSAGE" value="standalone callback added" />
+    <MESSAGE value="useSearch props added to Select element" />
+    <option name="LAST_COMMIT_MESSAGE" value="useSearch props added to Select element" />
   </component>
 </project>

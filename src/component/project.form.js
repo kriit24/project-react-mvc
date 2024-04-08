@@ -874,6 +874,7 @@ const ProjectForm = CreateReactClass({
         mediaTypes: ImagePicker.MediaTypeOptions.All,
         allowsEditing: false,
         base64: true,
+        allowsMultipleSelection: props.multiple !== undefined ? props.multiple : false,
       });
 
       //https://docs.expo.dev/versions/latest/sdk/imagepicker/
@@ -998,6 +999,7 @@ const ProjectForm = CreateReactClass({
         quality: props.quality === undefined ? 0.4 : props.quality,
         allowsEditing: false,
         base64: true,
+        allowsMultipleSelection: props.multiple !== undefined ? props.multiple : false,
       });
 
       //https://docs.expo.dev/versions/latest/sdk/imagepicker/
