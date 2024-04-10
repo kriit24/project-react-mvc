@@ -747,7 +747,7 @@ const ProjectForm = CreateReactClass({
 
     return (
         <FormSwitch
-            value={value}
+            value={value ? true : false}
             onChange={onDataChange}
             text={props.text}
             attr={attr}
