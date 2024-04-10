@@ -376,7 +376,7 @@ const ProjectForm = CreateReactClass({
                 this.setValue(props.name, val, true);
               }}
               value={null}
-              defaultValue={this.setValue(props.name, value)}
+              defaultValue={typeof this.setValue(props.name, value) == 'number' ? this.setValue(props.name, value).toString() : this.setValue(props.name, value)}
               placeholder={props.placeholder}
               {...attr}
           />

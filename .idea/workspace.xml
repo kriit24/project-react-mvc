@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="useSearch props added to Select element">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="From method Camera and Gallery multiple image selection added option: {multiple: true|false}">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
@@ -125,7 +125,10 @@
       <workItem from="1712231441959" duration="669000" />
       <workItem from="1712556034852" duration="286000" />
       <workItem from="1712572233648" duration="5000" />
-      <workItem from="1712572699527" duration="364000" />
+      <workItem from="1712572699527" duration="545000" />
+      <workItem from="1712580670175" duration="109000" />
+      <workItem from="1712582489667" duration="249000" />
+      <workItem from="1712740457285" duration="142000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -421,7 +424,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Form data validation added" />
     <MESSAGE value="Form checkbox added" />
     <MESSAGE value="Form checkbox updated" />
     <MESSAGE value="Form keyboardavoiding view behavior fix" />
@@ -464,6 +466,7 @@
     <MESSAGE value="props.action() fix inside action" />
     <MESSAGE value="standalone callback added" />
     <MESSAGE value="useSearch props added to Select element" />
-    <option name="LAST_COMMIT_MESSAGE" value="useSearch props added to Select element" />
+    <MESSAGE value="From method Camera and Gallery multiple image selection added option: {multiple: true|false}" />
+    <option name="LAST_COMMIT_MESSAGE" value="From method Camera and Gallery multiple image selection added option: {multiple: true|false}" />
   </component>
 </project>
