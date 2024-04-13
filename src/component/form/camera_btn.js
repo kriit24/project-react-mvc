@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import unique_id from "project-react-mvc/src/helper/unique_id";
-import {AntDesign} from '@expo/vector-icons';
+import {AntDesign, FontAwesome} from '@expo/vector-icons';
+import css from "project-react-mvc/src/assets/style";
 
 function CameraImages(props) {
 
@@ -72,7 +73,11 @@ export default function CameraBtn(props) {
                     props.onPress(setPicture);
                 }}
             >
-                <Text>{picture !== undefined ? picture : 'Take Picture'}</Text>
+                {props.icon ?
+                    <View style={[css.btn, {padding: 10, paddingTop: 10, paddingBottom: 10}, (picture !== undefined ? css.btn_success : {})]}><FontAwesome name={props.iconType} size={24} color="white"/></View>
+                    :
+                    <Text>{picture !== undefined ? picture : 'Take Picture'}</Text>
+                }
             </TouchableOpacity>
             {imageList.length ? <View style={styles.imageContainer}>{imageList}</View> : null}
         </View>

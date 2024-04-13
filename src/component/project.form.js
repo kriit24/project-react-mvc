@@ -961,6 +961,8 @@ const ProjectForm = CreateReactClass({
     return (
         <CameraBtn
             {...props}
+            icon={props.icon !== undefined ? props.icon : false}
+            iconType="image"
             style={style}
             onPress={onPress}
             onDelete={onDelete}
@@ -1067,6 +1069,8 @@ const ProjectForm = CreateReactClass({
     return (
         <CameraBtn
             {...props}
+            icon={props.icon !== undefined ? props.icon : false}
+            iconType="camera"
             style={style}
             onPress={onPress}
             onDelete={onDelete}
