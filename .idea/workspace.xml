@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="convert number to string for textinput">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="switch value not need to be a boolean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/checkbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +130,8 @@
       <workItem from="1712580670175" duration="109000" />
       <workItem from="1712582489667" duration="249000" />
       <workItem from="1712740457285" duration="261000" />
-      <workItem from="1712741810713" duration="75000" />
+      <workItem from="1712741810713" duration="116000" />
+      <workItem from="1712979441438" duration="31000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -425,7 +427,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Form checkbox updated" />
     <MESSAGE value="Form keyboardavoiding view behavior fix" />
     <MESSAGE value="Form checkbox installed" />
     <MESSAGE value="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed" />
@@ -468,6 +469,7 @@
     <MESSAGE value="useSearch props added to Select element" />
     <MESSAGE value="From method Camera and Gallery multiple image selection added option: {multiple: true|false}" />
     <MESSAGE value="convert number to string for textinput" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert number to string for textinput" />
+    <MESSAGE value="switch value not need to be a boolean" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch value not need to be a boolean" />
   </component>
 </project>

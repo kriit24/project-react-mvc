@@ -1,4 +1,4 @@
-import {Ionicons} from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
 import React from "react";
 import {TouchableOpacity, View} from "react-native";
 
@@ -17,7 +17,7 @@ export default function CheckBox(props) {
                 setChecked(false);
             }
         }}>
-            <Ionicons name="checkbox" size={32} color="black"/>
+            <Fontisto name="checkbox-active" size={32} color="black" />
             {props.children !== undefined ? props.children : null}
         </TouchableOpacity>;
     }
@@ -29,8 +29,7 @@ export default function CheckBox(props) {
             setChecked(true);
         }
     }}>
-        <Ionicons name="checkbox-outline" size={32} color={props.disabled ? 'grey' : 'black'}/>
-        <View style={{width: 20, height: 20, backgroundColor: 'white', marginTop: 20.5, marginLeft: 19.5, position: 'absolute'}}/>
+        <Fontisto name="checkbox-passive" size={32} color="black" style={{paddingRight: props.children !== undefined ? 3 : 0}}/>
         {props.children !== undefined ? props.children : null}
     </TouchableOpacity>;
 }

@@ -767,6 +767,8 @@ const ProjectForm = CreateReactClass({
       ...css.form_control,
       ...propsStyle
     };
+    if( propsStyle.padding === undefined )
+      style.padding = 15;
 
     let onDataChange = (value) => {
 
@@ -776,9 +778,9 @@ const ProjectForm = CreateReactClass({
 
     if(props.text !== undefined){
 
-      return <View style={[css.form_control, style]}>
+      return <View style={style}>
         <CheckBox
-            style={{flexDirection: 'row', width: '100%', padding: 15}}
+            style={{flexDirection: 'row', width: '100%'}}
             disabled={props.disabled !== undefined ? props.disabled : false}
             value={value}
             onDataChange={onDataChange}
@@ -792,7 +794,7 @@ const ProjectForm = CreateReactClass({
 
     return <View style={[{flexDirection: 'column', width: '100%'}, style]}>
       <CheckBox
-          style={[css.form_control, {padding: 15}]}
+          style={{}}
           disabled={props.disabled !== undefined ? props.disabled: false}
           value={value}
           onDataChange={onDataChange}
