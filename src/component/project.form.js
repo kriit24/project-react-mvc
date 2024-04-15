@@ -851,7 +851,9 @@ const ProjectForm = CreateReactClass({
    </Form.Group>
     */
 
-  Gallery(props) {
+  Gallery(attr) {
+
+    let props = Object.assign({}, attr);
     props.label = props.label === undefined ? 'Take Picture' : props.label;
     props.label_loaded = props.label_loaded === undefined ? 'Picture loaded' : props.label_loaded;
     let onChange = props.onChange;
@@ -980,9 +982,11 @@ const ProjectForm = CreateReactClass({
     </Form.Group>
      */
 
-  Camera(props) {
-    props.label = props.label === undefined ? 'Take Picture' : props.label;
-    props.label_loaded = props.label_loaded === undefined ? 'Picture loaded' : props.label_loaded;
+  Camera(attr) {
+
+    let props = Object.assign({}, attr);
+    props.label = props.label == undefined ? 'Take Picture' : props.label;
+    props.label_loaded = props.label_loaded == undefined ? 'Picture loaded' : props.label_loaded;
     let onChange = props.onChange;
     let onPress = async (setPicture) => {
       setPicture(props.loading !== undefined ? props.loading : 'Loading ...');
