@@ -76,7 +76,7 @@ export default function CameraBtn(props) {
                 {props.icon ?
                     <View style={[css.btn, {padding: 10, paddingTop: 10, paddingBottom: 10}, (picture !== undefined ? css.btn_success : {})]}><FontAwesome name={props.iconType} size={24} color="white"/></View>
                     :
-                    <Text>{picture !== undefined ? picture : 'Take Picture'}</Text>
+                    <Text style={props.style_btn}>{picture !== undefined ? picture : props.label}</Text>
                 }
             </TouchableOpacity>
             {imageList.length ? <View style={styles.imageContainer}>{imageList}</View> : null}

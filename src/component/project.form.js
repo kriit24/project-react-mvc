@@ -852,6 +852,8 @@ const ProjectForm = CreateReactClass({
     */
 
   Gallery(props) {
+    props.label = props.label === undefined ? 'Take Picture' : props.label;
+    props.label_loaded = props.label_loaded === undefined ? 'Picture loaded' : props.label_loaded;
     let onChange = props.onChange;
     let onPress = async (setPicture) => {
       setPicture(props.loading !== undefined ? props.loading : 'Loading ...');
@@ -899,7 +901,7 @@ const ProjectForm = CreateReactClass({
 
             value.push({fileName: filename, image: result.assets[0].base64});
             this.setValue(props.name, value, true);
-            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded (' + value.length + 'pc)');
+            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : props.label_loaded + ' (' + value.length + 'pc)');
           }
           else{
 
@@ -917,7 +919,7 @@ const ProjectForm = CreateReactClass({
                 [{ fileName: filename, image: result.assets[0].base64 }],
                 true
             );
-            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded ('+value.length+'pc)');
+            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : props.label_loaded + ' ('+value.length+'pc)');
           }
           else{
 
@@ -949,7 +951,7 @@ const ProjectForm = CreateReactClass({
         tmp = [];
 
         if( this.formData[elemName].length )
-          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : 'Picture loaded ('+this.formData[elemName].length+'pc)');
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : props.label_loaded + ' ('+this.formData[elemName].length+'pc)');
         else
           setPicture(props.placeholder);
       }
@@ -979,6 +981,8 @@ const ProjectForm = CreateReactClass({
      */
 
   Camera(props) {
+    props.label = props.label === undefined ? 'Take Picture' : props.label;
+    props.label_loaded = props.label_loaded === undefined ? 'Picture loaded' : props.label_loaded;
     let onChange = props.onChange;
     let onPress = async (setPicture) => {
       setPicture(props.loading !== undefined ? props.loading : 'Loading ...');
@@ -1023,14 +1027,14 @@ const ProjectForm = CreateReactClass({
                   : [];
           value.push({ fileName: filename, image: result.assets[0].base64 });
           this.setValue(props.name, value, true);
-          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : 'Picture loaded ('+value.length+'pc)');
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : props.label_loaded+ ' ('+value.length+'pc)');
         } else {
           this.setValue(
               props.name,
               [{ fileName: filename, image: result.assets[0].base64 }],
               true
           );
-          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : 'Picture loaded');
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, '1') : props.label_loaded);
         }
         promiseResolve();
       } else {
@@ -1057,7 +1061,7 @@ const ProjectForm = CreateReactClass({
         tmp = [];
 
         if( this.formData[elemName].length )
-          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : 'Picture loaded ('+this.formData[elemName].length+'pc)');
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, this.formData[elemName].length) : props.label_loaded + ' ('+this.formData[elemName].length+'pc)');
         else
           setPicture(props.placeholder);
       }

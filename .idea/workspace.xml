@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="checkbox redesigned">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="now is possible to use &quot;take picture&quot; input, camera ico and gallery ico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/form/camera_btn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/camera_btn.js" afterDir="false" />
@@ -132,7 +132,8 @@
       <workItem from="1712740457285" duration="261000" />
       <workItem from="1712741810713" duration="116000" />
       <workItem from="1712979441438" duration="95000" />
-      <workItem from="1712981908634" duration="134000" />
+      <workItem from="1712981908634" duration="183000" />
+      <workItem from="1713168100732" duration="69000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -428,7 +429,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Form checkbox installed" />
     <MESSAGE value="checkbox fix&#10;KeyboardAvoidingView props.behavior added to add custom value if needed" />
     <MESSAGE value="added scrollview ref" />
     <MESSAGE value="new Bind method added to component" />
@@ -471,6 +471,7 @@
     <MESSAGE value="convert number to string for textinput" />
     <MESSAGE value="switch value not need to be a boolean" />
     <MESSAGE value="checkbox redesigned" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkbox redesigned" />
+    <MESSAGE value="now is possible to use &quot;take picture&quot; input, camera ico and gallery ico" />
+    <option name="LAST_COMMIT_MESSAGE" value="now is possible to use &quot;take picture&quot; input, camera ico and gallery ico" />
   </component>
 </project>
