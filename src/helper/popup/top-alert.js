@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ActivityIndicator, Modal, Text, View } from 'react-native';
 import counterStore from './counter-store';
 import style from './style';
+let closeTopeAlertTimeout = null;
 
 export function TopAlert(content) {
   counterStore.setTopAlert({
@@ -55,7 +56,11 @@ export function ShowTopAlert() {
 }
 
 export function CloseTopAlert(timeOut = 0, complete) {
-  setTimeout(() => {
+
+  if( closeTopeAlertTimeout )
+    clearTimeout(closeTopeAlertTimeout);
+
+  closeTopeAlertTimeout = setTimeout(() => {
     if (complete !== undefined) complete();
 
     counterStore.setTopAlert({

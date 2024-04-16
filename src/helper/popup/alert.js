@@ -11,6 +11,8 @@ import counterStore from './counter-store';
 import style from './style';
 import css from '../../assets/style';
 
+let closeAlertTimeout = null;
+
 export function Alert(content, header) {
   counterStore.setAlert({
     is_active: true,
@@ -85,7 +87,11 @@ export function ShowAlert() {
 }
 
 export function CloseAlert(timeOut = 0, complete) {
-  setTimeout(() => {
+
+  if( closeAlertTimeout )
+    clearTimeout(closeAlertTimeout);
+
+  closeAlertTimeout = setTimeout(() => {
     if (complete !== undefined) complete();
 
     counterStore.setAlert({

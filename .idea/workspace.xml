@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="take picture and picture taken label is now customize able" />
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="take picture and picture taken label is now customize able - improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/popup/alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/popup/bottom-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/bottom-alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/popup/bottom-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/bottom-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/popup/full-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/full-alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/popup/top-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/top-alert.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,28 +33,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/docs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "C:/Users/kuno/Documents/_WORK/PHPSTORM/npm/project-react-mvc/src/helper/popup",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kuno\\Documents\\_WORK\\PHPSTORM\\npm\\project-react-mvc\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\helper\popup" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\docs" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\component" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\docs\promise" />
       <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src\component\form" />
-      <recent name="C:\Users\kuno\Documents\_WORK\PHPSTORM\npm\project-react-mvc\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -129,6 +137,8 @@
       <workItem from="1712979441438" duration="95000" />
       <workItem from="1712981908634" duration="183000" />
       <workItem from="1713168100732" duration="168000" />
+      <workItem from="1713169407201" duration="70000" />
+      <workItem from="1713252618925" duration="136000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -424,7 +434,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +452,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added scrollview ref" />
     <MESSAGE value="new Bind method added to component" />
     <MESSAGE value="camera thmb added and image deletion added" />
     <MESSAGE value="---&#10;camera thmb added and image deletion added&#10;&#10;---&#10;promise args added" />
@@ -467,6 +476,7 @@
     <MESSAGE value="checkbox redesigned" />
     <MESSAGE value="now is possible to use &quot;take picture&quot; input, camera ico and gallery ico" />
     <MESSAGE value="take picture and picture taken label is now customize able" />
-    <option name="LAST_COMMIT_MESSAGE" value="take picture and picture taken label is now customize able" />
+    <MESSAGE value="take picture and picture taken label is now customize able - improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="take picture and picture taken label is now customize able - improvements" />
   </component>
 </project>

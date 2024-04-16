@@ -11,6 +11,8 @@ import counterStore from './counter-store';
 import style from './style';
 import css from '../../assets/style';
 
+let closeBottomModalTimeout = null;
+
 export function BottomModal(content, header) {
   counterStore.setBottomModal({
     is_active: true,
@@ -105,7 +107,11 @@ export function ShowBottomModal() {
 }
 
 export function CloseBottomModal(timeOut = 0, complete) {
-  setTimeout(() => {
+
+  if( closeBottomModalTimeout )
+    clearTimeout(closeBottomModalTimeout);
+
+  closeBottomModalTimeout = setTimeout(() => {
     if (complete !== undefined) complete();
 
     counterStore.setBottomModal({

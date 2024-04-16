@@ -10,6 +10,8 @@ import counterStore from './counter-store';
 import style from './style';
 import css from '../../assets/style';
 
+let closeBottomAlertTimeout = null;
+
 export function BottomAlert(content, header) {
   counterStore.setBottomAlert({
     is_active: true,
@@ -89,7 +91,10 @@ export function ShowBottomAlert() {
 }
 
 export function CloseBottomAlert(timeOut = 0, complete) {
-  setTimeout(() => {
+ if(closeBottomAlertTimeout)
+   clearTimeout(closeBottomAlertTimeout);
+
+  closeBottomAlertTimeout = setTimeout(() => {
     if (complete !== undefined) complete();
 
     counterStore.setBottomAlert({

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Text, View } from 'react-native';
 import counterStore from './counter-store';
 
+let closeFullAlertTimeout = null;
+
 export function FullAlert(content) {
   counterStore.setFullAlert({
     is_active: true,
@@ -63,7 +65,11 @@ export function ShowFullAlert() {
 }
 
 export function CloseFullAlert(timeOut = 0, complete) {
-  setTimeout(() => {
+
+  if(closeFullAlertTimeout)
+    clearTimeout(closeFullAlertTimeout);
+
+  closeFullAlertTimeout = setTimeout(() => {
     if (complete !== undefined) complete();
 
     counterStore.setFullAlert({
