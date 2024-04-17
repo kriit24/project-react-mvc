@@ -31,8 +31,10 @@ export default class ProjectPromise {
                 this.values = [];
                 if (reject !== undefined)
                     reject(error);
+                /*
                 if (!process.env.NODE_ENV || process.env.NODE_ENV === "development")
                     throw error
+                */
             });
         }
         else{
