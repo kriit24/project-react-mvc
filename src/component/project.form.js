@@ -318,11 +318,7 @@ const ProjectForm = CreateReactClass({
                 autoFocus={false}
                 multiline={false}
                 onFocus={Keyboard.dismiss}
-                value={this.setValue(
-                    props.name,
-                    value ? value.toString() : value,
-                    true
-                )}
+                value={typeof this.setValue(props.name, value ? value.toString() : value, true) == 'number' ? this.setValue(props.name, value ? value.toString() : value, true).toString() : this.setValue(props.name, value ? value.toString() : value, true)}
             />
           </View>
       );
