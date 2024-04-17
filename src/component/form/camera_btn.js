@@ -66,7 +66,7 @@ export default function CameraBtn(props) {
     let imageList = CameraImages({...props, ...{images: props.parent.formData[props.name], setPicture: setPicture}});
 
     return (
-        <View style={{flex: 1, flexDirection: 'column'}}>
+        <View style={{flex: (props.icon ? 0 : 1), flexDirection: 'column', flexWrap: 'nowrap'}}>
             <TouchableOpacity
                 style={props.style}
                 onPress={() => {
@@ -74,7 +74,9 @@ export default function CameraBtn(props) {
                 }}
             >
                 {props.icon ?
-                    <View style={[css.btn, {padding: 10, paddingTop: 10, paddingBottom: 10}, (picture !== undefined ? css.btn_success : {})]}><FontAwesome name={props.iconType} size={24} color="white"/></View>
+                    <View style={[css.btn, {paddingLeft: 10, paddingRight: 10, paddingTop: 10, paddingBottom: 10}, (picture !== undefined ? css.btn_success : {})]}>
+                        <FontAwesome name={props.iconType} size={24} color="white"/>
+                    </View>
                     :
                     <Text style={props.style_btn}>{picture !== undefined ? picture : props.label}</Text>
                 }

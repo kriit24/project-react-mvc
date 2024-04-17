@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="promise reject throw removed">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="input hidden value number to string conversion added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/camera_btn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/camera_btn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +136,8 @@
       <workItem from="1713169407201" duration="70000" />
       <workItem from="1713252618925" duration="307000" />
       <workItem from="1713339829672" duration="95000" />
-      <workItem from="1713344000676" duration="41000" />
+      <workItem from="1713344000676" duration="100000" />
+      <workItem from="1713351673928" duration="616000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -432,7 +433,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="---&#10;camera thmb added and image deletion added&#10;&#10;---&#10;promise args added" />
     <MESSAGE value="behavior default" />
     <MESSAGE value="radio button added" />
     <MESSAGE value="readme updated" />
@@ -475,6 +475,7 @@
     <MESSAGE value="take picture and picture taken label is now customize able - improvements" />
     <MESSAGE value="alert close clearTimeout fix added" />
     <MESSAGE value="promise reject throw removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="promise reject throw removed" />
+    <MESSAGE value="input hidden value number to string conversion added" />
+    <option name="LAST_COMMIT_MESSAGE" value="input hidden value number to string conversion added" />
   </component>
 </project>
