@@ -890,21 +890,25 @@ const ProjectForm = CreateReactClass({
               this.formData[props.name] !== null
                   ? this.formData[props.name]
                   : [];
-          let filename = result.assets[0].uri.substring(
-              result.assets[0].uri.lastIndexOf('/') + 1,
-              result.assets[0].uri.length
+
+          result.assets.map((img) => {
+
+            let filename = img.uri.substring(
+                img.uri.lastIndexOf('/') + 1,
+                img.uri.length
           );
-          let file_type = result.assets[0].type;
+            let file_type = img.type;
           if( file_type == 'image' ) {
 
-            value.push({fileName: filename, image: result.assets[0].base64});
+              value.push({fileName: filename, image: img.base64});
             this.setValue(props.name, value, true);
-            setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : props.label_loaded + ' (' + value.length + 'pc)');
           }
           else{
 
             alert('This is not a image');
           }
+          });
+          setPicture(props.loaded !== undefined ? props.loaded.replace(/{length}/gi, value.length) : props.label_loaded + ' (' + value.length + 'pc)');
         } else {
           let filename = result.assets[0].uri.substring(
               result.assets[0].uri.lastIndexOf('/') + 1,

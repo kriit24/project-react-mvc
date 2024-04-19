@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="input hidden value number to string conversion added">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="camera ico layout fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/form/camera_btn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/camera_btn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/project.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/project.form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +137,8 @@
       <workItem from="1713252618925" duration="307000" />
       <workItem from="1713339829672" duration="95000" />
       <workItem from="1713344000676" duration="100000" />
-      <workItem from="1713351673928" duration="616000" />
+      <workItem from="1713351673928" duration="668000" />
+      <workItem from="1713514365244" duration="41000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -433,7 +434,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +452,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="behavior default" />
     <MESSAGE value="radio button added" />
     <MESSAGE value="readme updated" />
     <MESSAGE value="radio updated" />
@@ -476,6 +476,7 @@
     <MESSAGE value="alert close clearTimeout fix added" />
     <MESSAGE value="promise reject throw removed" />
     <MESSAGE value="input hidden value number to string conversion added" />
-    <option name="LAST_COMMIT_MESSAGE" value="input hidden value number to string conversion added" />
+    <MESSAGE value="camera ico layout fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="camera ico layout fix" />
   </component>
 </project>
