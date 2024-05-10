@@ -1,4 +1,4 @@
-import { Fontisto } from '@expo/vector-icons';
+import Fontisto from '@expo/vector-icons/Fontisto';
 import React from "react";
 import {TouchableOpacity, View} from "react-native";
 
