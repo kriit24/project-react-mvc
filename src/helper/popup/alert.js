@@ -79,7 +79,7 @@ export function ShowAlert() {
               {header}
             </View>
           </View>
-          <View style={[style.modalViewContent]}>{content}</View>
+          <View style={[style.modalViewContent, {paddingTop: header !== undefined ? 0 : style.modalViewContent.paddingTop}]}>{content}</View>
         </View>
       </KeyboardAvoidingView>
     </Modal>

@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import counterStore from './popup/counter-store';
 import style from './popup/style';
 import { Alert, ShowAlert, CloseAlert } from './popup/alert';
@@ -18,6 +18,8 @@ import {
 import { Loader, ShowLoader, CloseLoader } from './popup/loader';
 import { Confirm, CloseConfirm } from './popup/confirm';
 import css from '../assets/style';
+import {FontAwesome} from "@expo/vector-icons";
+import React from "react";
 
 let keyIndex = 1;
 
@@ -204,6 +206,24 @@ function ErrorBackground(content) {
   );
 }
 
+function CloseBtn(){
+
+    return <View style={{alignItems: 'flex-end'}}>
+        <TouchableOpacity
+        style={{padding: 0, borderRadius: 4, borderWidth: 1, borderStyle: 'solid', borderColor: css.color_danger.color}}
+        onPress={() => {
+
+            Popup.CloseAlert();
+        }}>
+        <FontAwesome name="close" style={[css.color_danger, {
+            fontSize: 26,
+            padding: 0,
+            margin: 0,
+        }]}/>
+    </TouchableOpacity>
+    </View>;
+}
+
 const Popup = {
   init: counterStore.setConfig,
   Alert: Alert,
@@ -235,5 +255,6 @@ const Popup = {
   SuccessBackground: SuccessBackground,
   WarningBackground: WarningBackground,
   ErrorBackground: ErrorBackground,
+  CloseBtn: CloseBtn,
 };
 export default Popup;
