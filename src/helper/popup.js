@@ -206,21 +206,30 @@ function ErrorBackground(content) {
   );
 }
 
-function CloseBtn(){
+function CloseBtn(style) {
 
-    return <View style={{alignItems: 'flex-end'}}>
+    return <View style={[{alignItems: 'flex-end', marginTop: -3, marginRight: -3}, (style !== undefined ? style : {})]}>
         <TouchableOpacity
-        style={{padding: 0, borderRadius: 4, borderWidth: 1, borderStyle: 'solid', borderColor: css.color_danger.color}}
-        onPress={() => {
+            onPress={() => {
 
-            Popup.CloseAlert();
-        }}>
-        <FontAwesome name="close" style={[css.color_danger, {
-            fontSize: 26,
-            padding: 0,
-            margin: 0,
-        }]}/>
-    </TouchableOpacity>
+                Popup.CloseAlert();
+            }}>
+            <FontAwesome name="close" style={[css.color_danger, {
+                width: 'auto',
+                fontSize: 26,
+                padding: 0,
+                paddingRight: 0,
+                paddingLeft: 2,
+                margin: 0,
+                marginRight: 0,
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: 4,
+                borderWidth: 1,
+                borderStyle: 'solid',
+                borderColor: css.color_danger.color
+            }]}/>
+        </TouchableOpacity>
     </View>;
 }
 

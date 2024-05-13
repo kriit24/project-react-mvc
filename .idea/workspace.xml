@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="SDK 51">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="alert header close btn added Popup.CloseBtn() what now is extendable as Popup.Alert(&#10;content,Popup.CloseBtn() &#10;);">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helper/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/popup/alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/alert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/popup/bottom-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/bottom-alert.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +140,8 @@
       <workItem from="1713514365244" duration="82000" />
       <workItem from="1715337419589" duration="728000" />
       <workItem from="1715414361378" duration="18000" />
-      <workItem from="1715491800107" duration="443000" />
+      <workItem from="1715491800107" duration="1170000" />
+      <workItem from="1715574675430" duration="34000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -439,7 +437,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="radio updated" />
     <MESSAGE value="checkbox and radio updated" />
     <MESSAGE value="form radio fix" />
     <MESSAGE value="textarea popup fix" />
@@ -482,6 +479,7 @@
     <MESSAGE value="camera ico layout fix" />
     <MESSAGE value="multi image from gallery" />
     <MESSAGE value="SDK 51" />
-    <option name="LAST_COMMIT_MESSAGE" value="SDK 51" />
+    <MESSAGE value="alert header close btn added Popup.CloseBtn() what now is extendable as Popup.Alert(&#10;content,Popup.CloseBtn() &#10;);" />
+    <option name="LAST_COMMIT_MESSAGE" value="alert header close btn added Popup.CloseBtn() what now is extendable as Popup.Alert(&#10;content,Popup.CloseBtn() &#10;);" />
   </component>
 </project>
