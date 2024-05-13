@@ -71,7 +71,7 @@ export function ShowAlert() {
                   flexBasis: 'auto',
                   flexShrink: 0,
                   flexGrow: 1,
-                  padding: 5,
+                  padding: 0,
                   justifyContent: 'center',
                 },
               ]}

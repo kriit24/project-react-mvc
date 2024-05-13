@@ -208,7 +208,7 @@ function ErrorBackground(content) {
 
 function CloseBtn(style) {
 
-    return <View style={[{alignItems: 'flex-end', marginTop: -3, marginRight: -3}, (style !== undefined ? style : {})]}>
+    return <View style={[{alignItems: 'flex-end', marginTop: 1, marginRight: 1, paddingBottom: 2}, (style !== undefined ? style : {})]}>
         <TouchableOpacity
             onPress={() => {
 
