@@ -73,7 +73,7 @@ function DblClickInput(props) {
         ref={props.innerRef !== undefined ? props.innerRef : null}
         onChangeText={(text) => {
 
-            setSelection(startSelection);
+            setSelection({'start': (text !== null ? text.length : 0), 'end': (text !== null ? text.length : 0)});
             setEditableText(text);
             if( props.onChangeText ) props.onChangeText(text);
         }}
@@ -87,7 +87,7 @@ function DblClickInput(props) {
                 setEditable(false);
             } else {
 
-                setSelection(startSelection);
+                setSelection({'start': (editableText !== null ? editableText.length : 0), 'end': (editableText !== null ? editableText.length : 0)});
                 setEditable(true);
                 editableTimeout = setTimeout(() => {
 
