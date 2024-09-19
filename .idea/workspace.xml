@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Popup focus timeout increased">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/form/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/input.js" afterDir="false" />
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Popup text selection fix">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +143,7 @@
       <workItem from="1715574675430" duration="461000" />
       <workItem from="1715576236132" duration="98000" />
       <workItem from="1726716202140" duration="453000" />
-      <workItem from="1726719528458" duration="425000" />
+      <workItem from="1726719528458" duration="693000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -440,7 +439,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,8 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="textarea popup fix" />
-    <MESSAGE value="allow gallery upload only images" />
     <MESSAGE value="add timeout to action, so loader can be shown" />
     <MESSAGE value="docs updated" />
     <MESSAGE value="form input and text elem double click select all added" />
@@ -483,6 +480,8 @@
     <MESSAGE value="alert header close btn added Popup.CloseBtn() what now is extendable as Popup.Alert(&#10;content,Popup.CloseBtn() &#10;);" />
     <MESSAGE value="Popup.CloseBtn() style updated" />
     <MESSAGE value="Popup focus timeout increased" />
-    <option name="LAST_COMMIT_MESSAGE" value="Popup focus timeout increased" />
+    <MESSAGE value="Popup focus fix" />
+    <MESSAGE value="Popup text selection fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Popup text selection fix" />
   </component>
 </project>
