@@ -7,9 +7,7 @@
     <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="Popup.CloseBtn() style updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/popup/alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/alert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/popup/bottom-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/popup/bottom-alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +143,8 @@
       <workItem from="1715414361378" duration="18000" />
       <workItem from="1715491800107" duration="1170000" />
       <workItem from="1715574675430" duration="461000" />
-      <workItem from="1715576236132" duration="43000" />
+      <workItem from="1715576236132" duration="98000" />
+      <workItem from="1726716202140" duration="205000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -441,7 +440,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

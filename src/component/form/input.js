@@ -32,7 +32,7 @@ function FormInput(props) {
         if (globalInputRef && !globalInputRef.isFocused()) {
             globalInputRef.focus();
         }
-    }, 150);
+    }, 250);
 
     return (
         <DblClickInput
