@@ -66,19 +66,24 @@ function DblClickInput(props) {
     const [editableText, setEditableText] = useState(props.defaultValue !== null ? props.defaultValue : "");
     const [selection, setSelection] = useState(startSelection);
 
+    //selection={selection.end > 0 ? selection : null}
+
     return <TextInput
         {...props}
         defaultValue={editableText}
-        selection={selection.end > 0 ? selection : null}
+        selection={null}
         ref={props.innerRef !== undefined ? props.innerRef : null}
         onChangeText={(text) => {
 
+            /*
             setSelection({'start': (text !== null ? text.length : 0), 'end': (text !== null ? text.length : 0)});
             setEditableText(text);
+            */
             if( props.onChangeText ) props.onChangeText(text);
         }}
         onPressIn={() => {
 
+            /*
             if (editableTimeout) clearTimeout(editableTimeout);
 
             if (editable) {
@@ -94,6 +99,7 @@ function DblClickInput(props) {
                     setEditable(false);
                 }, 200);
             }
+            */
         }}
     />;
 }

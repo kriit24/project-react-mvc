@@ -1,6 +1,6 @@
 {
   "name": "project-react-mvc",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Project React MVC Package where is implemented Form and Popup packages",
   "main": "src/index.js",
   "react-native": "src/index.js",
