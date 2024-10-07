@@ -3,16 +3,16 @@ export default class ProjectPromise {
     promises = [];
     values = [];
 
-    push(callback, args) {
+    push(callback) {
 
         this.promises.push(
-            function (callback, args) {
+            function (callback) {
 
                 return new Promise((resolve, reject) => {
 
-                    callback.apply({}, [resolve, reject, (args !== undefined ? args : {}), ...this.values]);
+                    callback.apply({}, [resolve, reject, ...this.values]);
                 });
-            }.bind(this, callback, args)
+            }.bind(this, callback)
         );
     }
 
