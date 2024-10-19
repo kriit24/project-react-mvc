@@ -12,7 +12,6 @@ import {
   Platform,
   KeyboardAvoidingView,
 } from 'react-native';
-//import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import {
   ResetSelectDefaults,
   SelectSingle,
@@ -640,6 +639,76 @@ const ProjectForm = CreateReactClass({
       Popup.Alert(
           <View style={[{ alignSelf: 'stretch', width: width - 150 }]}>
             <SelectSingle
+                name={props.name}
+                style={style}
+                items={optionsList}
+                selectedValue={selectedValue}
+                setSelectedValue={onDataChange}
+                setSelectedBtnValue={setSelectedBtnValue}
+                useSearch={props.useSearch !== undefined ? props.useSearch : true}
+                selectSubmitButton={props.selectSubmitButton !== undefined ? props.selectSubmitButton : 'Select'}
+                closeSubmitButton={props.closeSubmitButton !== undefined ? props.closeSubmitButton : 'Close'}
+                searchText={props.searchText !== undefined ? props.searchText : 'Search'}
+            />
+          </View>
+      );
+    };
+
+    return (
+        <>
+          <ResetSelectDefaults />
+          <SelectPopupBtn
+              popup={popup}
+              selectedValue={selectedValue}
+              items={optionsList}
+              selectText={props.selectText !== undefined ? props.selectText : 'Select item'}
+          />
+        </>
+    );
+  },
+
+  //props
+  //option examples
+  //v.1. {'GROUP_1': [[key, value]], ...}
+  //v.2. {'GROUP_1': {'key': 1, 'label' : 'first_name last_name'}, ...}
+  //v.3. {'GROUP_1': {'employee_id': 1, 'employee_name' : 'first_name last_name'}, ...}
+  SelectGroup(props) {
+    let options = props.options;
+    let onChange = props.onChange;
+    let selectedValue = this.getValue(props);
+    let style = props.style !== undefined ? props.style : {};
+    this.setValue(props.name, selectedValue);
+    this.onChangeEvents[props.name] = onChange;
+
+    let selectOp = {};
+    if( Object.keys(options).length ){
+
+      let keys = Object.keys(options);
+      for (let i = 0; i < keys.length; i++) {
+
+        let arrayKey = keys[i];
+        let arrayValue = SelectDataToOptionList(options[arrayKey], selectedValue);
+
+        selectOp[arrayKey] = arrayValue.optionsList;
+      }
+    }
+    let optionsList = selectOp;
+
+    let onDataChange = (value) => {
+      this.setValue(props.name, value, true);
+    };
+
+    style =
+        Object.keys(style).length > 0
+            ? style
+            : { height: '100%', margin: 0, padding: 0 };
+
+    let width = Dimensions.get('window').width; //full width
+    let popup = ({ setSelectedBtnValue }) => {
+      Popup.Alert(
+          <View style={[{ alignSelf: 'stretch', width: width - 150 }]}>
+            <SelectSingle
+                group={true}
                 name={props.name}
                 style={style}
                 items={optionsList}

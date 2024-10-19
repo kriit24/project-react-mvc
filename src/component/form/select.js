@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import SelectSingleElem from './select_single';
+import SelectGroupSingleElem from './select_group_single';
 import SelectMultiElem from './select_multi';
 import unique_id from '../../helper/unique_id';
 import css from '../../assets/style';
@@ -20,6 +21,28 @@ function SelectSingle(props) {
   let items = popupSelected(props.items, selectedValue);
 
   defaultValues[props.name] = selectedValue;
+
+    if (props.group !== undefined && props.group) {
+
+        return (
+            <View style={{...css.form_control, paddingBottom: 0}}>
+                <SelectGroupSingleElem
+                    name={props.name}
+                    items={items}
+                    selectedValue={selectedValue}
+                    useSearch={props.useSearch}
+                    searchText={props.searchText}
+                    selectSubmitButton={props.selectSubmitButton}
+                    closeSubmitButton={props.closeSubmitButton}
+                    setSelectedValue={(selected) => {
+                        props.setSelectedValue(selected);
+                        props.setSelectedBtnValue(selected);
+                        setSelectedValue(selected);
+                    }}
+                />
+            </View>
+        );
+    }
 
   return (
     <View style={{ ...css.form_control, paddingBottom: 0 }}>
@@ -94,6 +117,9 @@ function SelectPopupBtn(props) {
 function popupSelected(options, selectedValue) {
   let selected = Array.isArray(selectedValue) ? selectedValue : [selectedValue];
   let list = [];
+    //single select options
+    if (Array.isArray(options)) {
+
   options.forEach((v, k) => {
     if (selected.indexOf(v.value) !== -1) {
       list.push(v);
@@ -104,6 +130,30 @@ function popupSelected(options, selectedValue) {
       list.push(v);
     }
   });
+    }
+    //group select options
+    else {
+
+        let keys = Object.keys(options);
+        for (let i = 0; i < keys.length; i++) {
+
+            let arrayKey = keys[i];
+            let rows = options[arrayKey];
+
+            list[arrayKey] = [];
+
+            rows.forEach((v, k) => {
+                if (selected.indexOf(v.value) !== -1) {
+                    list[arrayKey].push(v);
+                }
+            });
+            rows.forEach((v, k) => {
+                if (selected.indexOf(v.value) === -1) {
+                    list[arrayKey].push(v);
+                }
+            });
+        }
+    }
 
   return list;
 }
@@ -163,9 +213,21 @@ function SelectDataToOptionList(data, selectedValue) {
 }
 
 function SelectedLabel(items, selectedValue) {
-  if (!items.length) return null;
 
   if (!selectedValue) return null;
+
+    //assume singe array
+    if (Array.isArray(items)) {
+
+        if (!items.length) return null;
+    }
+    //assume group array
+    else{
+
+        if (!Object.keys(items).length) return null;
+
+        items = Object.values(items).flat();
+    }
 
   let ret = [];
   let selected = Array.isArray(selectedValue) ? selectedValue : [selectedValue];
