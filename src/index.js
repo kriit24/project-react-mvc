@@ -45,5 +45,10 @@ function Bind(props) {
     return Source;
 }
 
+function Action(component){
 
-export { Project, ScrollView, Form, Validate, Popup, Loader, App, Bind, Callback };
+    return (new ProjectReact(this)).action(component);
+}
+
+
+export { Project, ScrollView, Form, Validate, Popup, Loader, App, Bind, Callback, Action };
