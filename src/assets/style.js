@@ -90,6 +90,21 @@ const css = StyleSheet.create({
     borderColor: '#D3D3D3',
     backgroundColor: '#D3D3D3',
   },
+  btn_close: {
+    width: 'auto',
+    fontSize: 46,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 6,
+    paddingRight: 6,
+    margin: 0,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 52 / 2,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ffffff'
+  },
 
   bg_success: {
     borderColor: '#259041',
@@ -103,6 +118,8 @@ const css = StyleSheet.create({
     borderColor: '#b81640',
     backgroundColor: '#b81640',
   },
+
+
 
   form_label: {
     textAlign: 'left',
