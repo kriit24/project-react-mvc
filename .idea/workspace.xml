@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="btn_close rounded x added">
+    <list default="true" id="b842be63-8a49-48c1-884d-8be1ef331c7d" name="Changes" comment="btn_close_sm (small) rounded x added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +161,9 @@
       <workItem from="1729314564426" duration="238000" />
       <workItem from="1730351825295" duration="154000" />
       <workItem from="1731558841596" duration="155000" />
-      <workItem from="1731560398223" duration="44000" />
+      <workItem from="1731560398223" duration="99000" />
+      <workItem from="1733552202687" duration="45000" />
+      <workItem from="1733552266552" duration="25000" />
     </task>
     <task id="LOCAL−00007" summary="first version updated">
       <created>1695026313805</created>
@@ -458,7 +459,7 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1702457168926</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="standalone callback added" />
     <MESSAGE value="useSearch props added to Select element" />
     <MESSAGE value="From method Camera and Gallery multiple image selection added option: {multiple: true|false}" />
     <MESSAGE value="convert number to string for textinput" />
@@ -501,6 +501,7 @@
     <MESSAGE value="SelectGroup element added" />
     <MESSAGE value="Action function added" />
     <MESSAGE value="btn_close rounded x added" />
-    <option name="LAST_COMMIT_MESSAGE" value="btn_close rounded x added" />
+    <MESSAGE value="btn_close_sm (small) rounded x added" />
+    <option name="LAST_COMMIT_MESSAGE" value="btn_close_sm (small) rounded x added" />
   </component>
 </project>

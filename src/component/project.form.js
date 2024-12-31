@@ -303,6 +303,7 @@ const ProjectForm = CreateReactClass({
     let type = props.type !== undefined ? props.type : 'text';
     let attr = props.attr !== undefined ? props.attr : {};
     attr = { ...{ autoCapitalize: 'none', style: {} }, ...attr };
+    attr.onPressIn = props.onPressIn !== undefined ? props.onPressIn : null;
 
     if (props.name === undefined) {
       Alert.alert('project.from error: input name is undefined');

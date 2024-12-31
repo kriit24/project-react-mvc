@@ -83,6 +83,8 @@ function DblClickInput(props) {
         }}
         onPressIn={() => {
 
+            if( props.onPressIn ) props.onPressIn();
+
             /*
             if (editableTimeout) clearTimeout(editableTimeout);
 
